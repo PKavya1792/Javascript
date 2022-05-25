@@ -22,7 +22,11 @@ const ex3 = () => {
 
 const countNumbers = (array) => {
     let retval = 0;
-    // TODO...
+    for (let y of array){
+        if (typeof(y)  === "number") {
+            retval += 1;
+        }
+    }
     return retval;
 }
 
