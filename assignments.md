@@ -1,4 +1,4 @@
-# Assignments
+# Assignments 
 
 ## Ex. 1
 Create an arrow function called `countNumbers` that takes an array and
