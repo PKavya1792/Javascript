@@ -10,25 +10,32 @@ const ex1 = () => {
     console.log(countNumbers(array));
 }
 
-const ex2 = () => {
+//const ex2 = () => {
     // TODO...
-}
+//}
 
-const ex3 = () => {
+//const ex3 = () => {
     // TODO...
-}
+//}
 
 //
 // Your functions here...
 //
-
+//
+//remember to use for of when dealing with arrays
+//
 const countNumbers = (array) => {
-    let retval = 0;
-    // TODO...
-    return retval;
+      let retval = 0;
+    for( const i of array){
+        if ( typeof (i) == 'number'){
+            retval += 1;
+        }
+    }
+     return retval;
 }
 
 const main = async () => {
+
     ex1();
 }
 
