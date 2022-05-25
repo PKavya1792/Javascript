@@ -4,62 +4,49 @@
 // Desc: To run, execute: node loops-operators
 //
 
-// Variables 
-//  - Null/Undefined.
-// Loops
-// Functions
-// Scope: // https://www.w3schools.com/js/js_scope.asp
-// Arrays & Dictionaries
-
 // ES5: vars can be used before they are declared, use let/const instead.
 // ES5: Vars are globally scoped, use let/const instead.
 catName = "Gypsy"
 var catName
 
-// ES6 New features: https://www.w3schools.com/js/js_es6.asp
-
-// String, Numbers, Boolean, null, undefined (5)... really 7
+// DataTypes: String, Numbers, Boolean, null, undefined, (Symbol, BigInt)
 const theName = "Joe"
 const age = 20;
 const rating = 4.5
-const isCool = true
+const isWorking = true
 const x = null
-const y = undefined  // undefined is reserved for the javascript engine.
-let z;
+const y = undefined  // undefined is reserved for the JavaScript engine, do not do this.
+let z; // Loaded into JS execution context, but not initialized.
 
 console.log(typeof theName);
 console.log(typeof age);
 console.log(typeof rating);
-console.log(typeof isCool);
+console.log(typeof isWorking);
 console.log(typeof x);
 console.log(typeof y);
 console.log(typeof z)
 
-// Functions
+//
+// Functions help organize our code
+//
 
-function test() {
-    console.log('here')
+function test() { 
+  // Do not create functions this way.
 }
 
-const main = (number, string) => {
-  catName = "Joe"
-  //console.log(number, string)
-  //console.log(catName)
-  
+const test2 = () => {
+  // arrow functions are preferred.
 }
 
-// Loops
+const main = () => {
+  // JavaScript is weekly typed.
+  const array = ['apples', 'oranges', 11, true];
+  shocking();
+}
 
-
-// Arrays
-// Weekly typed.
-const a = ['apples', 'oranges', 11, true];
-
-console.log(a);
-
-// Dictionaries
-
+const shocking = () => {
+  console.log("SHOCKING")
+}
 
 main()
-
 
