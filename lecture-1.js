@@ -48,5 +48,5 @@ const shocking = () => {
   console.log("SHOCKING")
 }
 
-main()
+// main()
 
