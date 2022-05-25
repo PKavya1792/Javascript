@@ -28,12 +28,16 @@ const countNumbers = (array) => {
         if (typeof(x) === typeof(COMPARISON_NUMBER)) {
             retval++;
         }
-     }
-    return retval;
+    } return retval;
 }
 
 const minNumber = array => {
-    let retval = 0;
+    let retval = array[0];
+    for (let x of array) {
+        if (x < retval) {
+            retval = x;
+        }
+    } return retval;
 }
 
 const main = async () => {
