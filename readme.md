@@ -10,7 +10,8 @@ Assignment repo that describes modern JavaScript with a focus on frontend React 
 - Clone this repo
 
 # Videos
-- [JavaScript Crash Course For Beginners](https://youtu.be/hdI2bqOjy3c)
+- [JavaScript Crash Course For Beginners (1h 40m)](https://youtu.be/hdI2bqOjy3c)
+  - Don't worry too much about the last 30 minutes (but still watch it)
 - [JavaScript Functions (48m)](https://app.pluralsight.com/library/courses/javascript-functions/table-of-contents)
 - [Mosh ES6 Tutorial: Learn Modern JavaScript (1hr)](https://youtu.be/NCwa_xi0Uuc)
 - [JavaScript DOM Crash Course - Part 1 (40m)](https://youtu.be/0ik6X4DJKCc)
