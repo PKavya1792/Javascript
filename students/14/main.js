@@ -22,7 +22,9 @@ const ex3 = () => {
 
 const countNumbers = (array) => {
     let retval = 0;
-    // TODO...
+array.forEach(Number => {
+        retval++
+});
     return retval;
 }
 
