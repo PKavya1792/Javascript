@@ -9,14 +9,14 @@
 catName = "Gypsy"
 var catName
 
-// DataTypes: String, Numbers, Boolean, null, undefined, (Symbol, BigInt)
+// DataTypes: String, Number, Boolean, null, undefined, (Symbol, BigInt)
 const theName = "Joe"
 const age = 20;
 const rating = 4.5
 const isWorking = true
-const x = null
-const y = undefined  // undefined is reserved for the JavaScript engine, do not do this.
-let z; // Loaded into JS execution context, but not initialized.
+const x = null // Loaded into JavaScript execution context, and initialized to null.
+const y = undefined  // undefined is reserved for the JavaScript engine, we should not do this.
+let z; // Loaded into JavaScript execution context, but not initialized.
 
 console.log(typeof theName);
 console.log(typeof age);
