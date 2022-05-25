@@ -9,7 +9,8 @@ const ex1 = () => {
 }
 
 const ex2 = () => {
-    // TODO...
+    const array = [12, 55, 2, 22, 11];
+    console.log(minNumber(array));
 }
 
 const ex3 = () => {
@@ -22,16 +23,22 @@ const ex3 = () => {
 
 const countNumbers = (array) => {
     let retval = 0;
+    const COMPARISON_NUMBER = 1;
     for (let x of array) {
-        if (typeof(x) === typeof(1)) {
+        if (typeof(x) === typeof(COMPARISON_NUMBER)) {
             retval++;
         }
      }
     return retval;
 }
 
+const minNumber = array => {
+    let retval = 0;
+}
+
 const main = async () => {
-    ex1();
+    //ex1();
+    ex2();
 }
 
 main();
