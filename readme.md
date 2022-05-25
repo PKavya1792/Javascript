@@ -33,6 +33,7 @@ Assignment repo that describes modern JavaScript with a focus on frontend React 
 - [Map Function](https://www.freecodecamp.org/news/javascript-map-how-to-use-the-js-map-function-array-method/)
 - [Strings](https://www.w3schools.com/js/js_strings.asp)
 - [Scope](https://www.w3schools.com/js/js_scope.asp)
+- [Casting](https://flaviocopes.com/javascript-casting/)
 
 # JavaScript Code Examples
 - [Variables & Block Scope](variables-block-scope.js)
