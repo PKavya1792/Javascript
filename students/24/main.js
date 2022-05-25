@@ -5,7 +5,6 @@
 
 const ex1 = () => {
     const array = [1, '2', 3, 'test', 1.2];
-    
     console.log(countNumbers(array));
 
 }
@@ -24,6 +23,11 @@ const ex3 = () => {
 
 const countNumbers = (array) => {
     let retval = 0;
+    for(const num of array){
+        if(typeof(num) == 'number'){
+            retval +=1;
+        }
+    }
     return retval;
 }
 
