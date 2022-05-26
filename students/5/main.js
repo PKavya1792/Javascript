@@ -91,7 +91,6 @@ const ex6 = () => {
 //func 6
 const longestString = array => {
     let result = "";
-
     for (let i = 0; i < array.length; i++) {
         result = array.reduce(
         function (a, b) {
@@ -100,13 +99,24 @@ const longestString = array => {
     } return result;
 }
 
+//ex 7
+const ex7 = () => {
+    const n = [1, 3, 6, 3, 6, 10];
+    console.log(sort(n));
+}
+//func 7
+const sort = n => {
+    return n.sort((a, b) => a - b);
+}
+
 const main = async () => {
     //ex1();
     //ex2();
     //ex3();
     //ex4();
     //ex5();
-    ex6();
+    //ex6();
+    ex7();
 }
 
 main();
