@@ -39,7 +39,7 @@ const test2 = () => {
 }
 
 const main = () => {
-  // JavaScript is weekly typed.
+  // JavaScript is weakly typed.
   const array = ['apples', 'oranges', 11, true]; 
 
   console.log(array[0]);
