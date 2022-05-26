@@ -119,6 +119,23 @@ const countWords = words => {
     return words.split(" ").length;
 }
 
+//ex 9
+const ex9 = () => {
+    const a = "this counts the number of words that end in s";
+    console.log(countS(a));
+}
+//func 9
+const countS = a => {
+    let result = 0;
+    const char = "s";
+    const aSplit = a.split(" ");
+    for (let x of aSplit) {
+        if (x.charAt(x.length-1) == char) {
+            result++;
+        }
+    } return result;
+}
+
 const main = async () => {
     //ex1();
     //ex2();
@@ -127,7 +144,8 @@ const main = async () => {
     //ex5();
     //ex6();
     //ex7();
-    ex8();
+    //ex8();
+    ex9();
 }
 
 main();
