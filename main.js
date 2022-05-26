@@ -36,6 +36,11 @@ const ex5 = () =>{
     }
     console.log("this appears: " + stringCount +" times.");
 }
+const ex6 = () => {
+    let array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
+
 //
 // Your functions here...
 //
@@ -82,13 +87,25 @@ const palidrome = (string) => {
     return retval;
 }
 
+const longestString = (array) =>{
+    let lengthofWords= [];
+    let index = 0;
+    for(let i of array){
+        lengthofWords.push(i.length);
+    }
+    while(array[index].length!=Math.max(...lengthofWords)){
+        index++;
+    }
+    return array[index];
+}
 
 const main = async () => {
    // ex1();
     //ex2();
     // ex3();
     // ex4();
-    ex5();
+    // ex5();
+    ex6();
 }
 
 main();
