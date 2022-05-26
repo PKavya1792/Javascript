@@ -25,10 +25,15 @@ const ex31 = () => {
   console.log(interleave(array1, array2));
 };
 
-// const ex4 = () => {
-//   console.log(palindrome("radar"));
-//   console.log(palindrome("month"));
-// };
+const ex4 = () => {
+  console.log(palindrome("radar"));
+  console.log(palindrome("month"));
+};
+
+const ex5 = () =>{
+  let str = "today this is a this is a this is a test.";
+  console.log(numWords);
+}
 //
 // Your functions here...
 //
@@ -64,12 +69,32 @@ const interleave = (array1, array2) => {
   }
 };
 
+const palindrome = (str) => {
+  // let splitString = str.split(" ");
+  // let reverseArray = splitString.reverse();
+  // let joinArray = reverseArray.join(" ");
+  let pal = str.split("").reverse().join("");
+  if (pal == str) {
+    let retval = true;
+    return retval;
+  } else {
+    let retval = false;
+    return retval;
+  }
+};
+
+const numWords = (str) => {
+  let retval = (str.match(/this/g) || []).length;
+ return retval;
+}
+
 const main = async () => {
   ex1();
   ex2();
   ex3();
   ex31();
   ex4();
+  ex5();
 };
 
 main();
