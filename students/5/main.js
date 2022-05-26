@@ -85,12 +85,19 @@ const thisCounter = string => {
 
 //ex 6
 const ex6 = () => {
-    array = ['this', 'is', 'a', 'test', 'happy'];
+    const array = ['this', 'is', 'a', 'test', 'happy'];
     console.log(longestString(array));
 }
 //func 6
 const longestString = array => {
-    
+    let result = "";
+
+    for (let i = 0; i < array.length; i++) {
+        result = array.reduce(
+        function (a, b) {
+            return a.length > b.length ? a : b;
+        });
+    } return result;
 }
 
 const main = async () => {
@@ -98,7 +105,8 @@ const main = async () => {
     //ex2();
     //ex3();
     //ex4();
-    ex5();
+    //ex5();
+    ex6();
 }
 
 main();
