@@ -25,15 +25,8 @@ const ex4 = () => {
 }
 
 const ex5 = () => {
-    let retval = 0;
     let str = "today this is a this is a this is a test.";
-    const strArray = str.split(" ")
-    for (let i = 0; i < strArray.length; i++) {
-        if (strArray[i] == 'this') {
-            retval += 1
-        }
-    }
-    console.log("'This' appears " + retval + " times.")
+    console.log(countRepeatWords(str))
 }
 
 const ex6 = () => {
@@ -110,6 +103,17 @@ const palindrome = (str) => {
     }
 }
 
+const countRepeatWords = (str) => {
+    let retval = 0;
+    const strArray = str.split(" ")
+    for (let i = 0; i < strArray.length; i++) {
+        if (strArray[i] == 'this') {
+            retval += 1
+        }
+    }
+    return "'This' appears " + retval + " times."
+}
+
 const longestString = (array) => {
     const sorted = array.sort((a, b) => b.length - a.length)
     return array[0].toString()
@@ -155,7 +159,7 @@ const numbersOnly = (arr) => {
 }
 
 const main = async () => {
-    ex11()
+    ex5()
 }
 
 main();
