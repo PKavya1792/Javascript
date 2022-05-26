@@ -29,7 +29,7 @@ const countNumbers = (array) => {
     let arr = array.filter(el => typeof el === 'number');
     return arr.length;
  }
- 
+
 let ex2 = () => {
     const array = [12, 55, 2, 22, 11];
     console.log(minNumber(array));
@@ -122,7 +122,7 @@ const countWords = (word) => {
 }
 
 let ex9 = () => {
-    var a = "this counts the number of words that end in s";
+    let a = "this counts the number of words that end in s";
     console.log(countS(a));
 }
 
@@ -132,7 +132,7 @@ const countS = (word) => {
 }
 
 let ex10 = () => {
-    var array = ["this", "is", "a", "test"];
+    let array = ["this", "is", "a", "test"];
     console.log(countLetters(array));
 }
 
