@@ -23,6 +23,11 @@ const ex4 = () => {
   console.log(palindrome("radar"));
   console.log(palindrome("month"));
 };
+
+const ex5 = () => {
+    let str = "today this is a this is a this is a test.";
+    console.log( `this appears: ${(countOccurences(str, "this"))} times.`)
+}
 //
 // Your functions here...
 //
@@ -72,8 +77,12 @@ const palindrome = (String) => {
   return true;
 };
 
+const countOccurences = (String,word) => {
+ return String.split(word).length -1  //splits the string and puts those substrings into an array,
+}                                     // then, it determines the count by using the length of the resulting array.
+
 const main = async () => {
-  ex4();
+  ex5();
 };
 
 main();
