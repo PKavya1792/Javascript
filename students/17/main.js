@@ -37,7 +37,7 @@ let ex2 = () => {
 
 const minNumber = (array) => {
     // return Math.min.apply( Math, array)
-    for(let i = 0; i<1; i++) {
+    for(let i of array) {
         array.sort(function(a, b){return a - b});
     }
     return array[0]
@@ -45,17 +45,18 @@ const minNumber = (array) => {
 
 let ex3 = () => {
     //usage 1
-    // const array1 = [1, 2, 3, 4, 5];
-    // const array2 = ['a', 'b', 'c', 'd', 'e'];
-    // console.log(interleave(array1, array2));
-    //usage 2
-    const array1 = [1, 2];
+    const array1 = [1, 2, 3, 4, 5];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
+    //usage 2
+    // const array1 = [1, 2];
+    // const array2 = ['a', 'b', 'c', 'd', 'e'];
+    // console.log(interleave(array1, array2));
 }
 
 const interleave = (array1, array2) => {
     let arr = [];
+    let i = 0;
     if(array1.length === array2.length){
         for(let i = 0; i < array1.length; i++){
             arr.push(array1[i], array2[i])
@@ -84,7 +85,7 @@ const palidrome = (word) => {
 
 let ex5 = () => {
     let str = "today this is a this is a this is a test.";
-    let newStr = str.split("this").length -1
+    let newStr = str.split("this").length -1;
     console.log("'this' appears: " + newStr + " times")
 }
 
@@ -109,7 +110,7 @@ let ex7 = () => {
 }
 
 const sort = (array) => {
-    return array.sort(function(a, b){return a -b})
+    return array.sort(function(a, b){return a - b})
 }
 
 let ex8 = () => {
