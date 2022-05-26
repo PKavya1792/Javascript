@@ -43,6 +43,14 @@ const ex4 = () => {
     const  array=['this', 'is', 'a', 'test', 'happy'];
      console.log(longestString(array));
  }
+ const ex7 = () =>{
+     let n=[1,3,6,3,2,10];
+     console.log(sort(n));
+ }
+ const ex8 = () =>{
+     let words= "Count the words in this string";
+     console.log(countWords(words));
+ }
 //
 // Your functions here...
 //
@@ -99,8 +107,15 @@ const longestString = (array) =>{
 }
     return longest;
 }
+const sort = (n) =>{
+    return n.sort((a,b)=> a-b);
+}
+const countWords = (words) =>{
+    let count =words.split(' ').length;
+    return count;
+}
 const main = async () => {
-    ex6();
+    ex8();
 }
 
 main();
