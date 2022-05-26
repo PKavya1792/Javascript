@@ -32,6 +32,10 @@ const ex5 = () => {
 
 }
 
+const ex6 = () =>{
+    const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
 
 //
 // Your functions here...
@@ -87,6 +91,15 @@ const wordRepeater = (word) =>{
     }
     return retval
 }
+const longestString = (array) =>{
+    
+    let temp = ""
+    for(const word of array){
+        if(word.length > temp.length)
+        temp = word
+    }
+    return temp
+}
 
 const main = async () => {
     ex1();
@@ -94,6 +107,7 @@ const main = async () => {
     ex3();
     ex4();
     ex5();
+    ex6();
 }
 
 main();
