@@ -16,13 +16,13 @@ const ex2 = () => {
 
 const ex3 = () => {
     //usage1
-    const array1 = [1, 2, 3, 4, 5];
+    //const array1 = [1, 2, 3, 4, 5];
+    //const array2 = ['a', 'b', 'c', 'd', 'e'];
+   // console.log(interleave(array1, array2));
+    //usage2
+    const array1 = [1, 2];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
-    //usage2
-   // const array1 = [1, 2];
-   // const array2 = ['a', 'b', 'c', 'd', 'e'];
-   //console.log(interleave(array1, array2));
 }
 
 //
@@ -43,14 +43,14 @@ const minNumber = (array) => {
      return array[0];
  }
  const interleave = (array1,array2)=> {
-    let array = [];
+    let array = []; 
     if(array1.length == array2.length){
     for (let i=0; i<array1.length; i++){
          array.push(array1[i], array2[i]);
         }   
         return array;
  }
-     
+    else return "ERROR: Array length mismatch";
 }
 const main = async () => {
     //ex1();
