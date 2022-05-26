@@ -60,6 +60,11 @@ const ex10 = () =>{
     console.log(countLetters(array));
 }
 
+const ex11 = () =>{
+    let arr = ['dog', 3, 7, 'cat', 13, 'car'];
+    console.log(numbersOnly(arr));
+}
+
 //
 // Your functions here...
 //
@@ -145,6 +150,16 @@ const countLetters = (array) =>{
     return letterCount;
 }
 
+const numbersOnly = (arr) =>{
+    let numArr = [];
+    for(let i = 0; i< arr.length; i++){
+        if(typeof(arr[i]) == 'number'){
+            numArr.push(arr[i])
+        }
+    }
+    return numArr;
+}
+
 const main = async () => {
    // ex1();
     //ex2();
@@ -155,7 +170,8 @@ const main = async () => {
     // ex7();
     // ex8();
     // ex9();
-    ex10();
+    // ex10();
+    ex11();
 }
 
 main();
