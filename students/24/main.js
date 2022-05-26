@@ -26,7 +26,19 @@ const ex4 = () => {
     console.log(palidrome('radar'));
     console.log(palidrome('month'));
 }
-
+ const ex5 = () =>{
+     let str = "today this is a this is a this is a test.";
+     let word = 'this';
+     let string = str.split(' ');
+     let count = 0;
+     for(let i=0; i<string.length;i++){
+     if(string[i]== word){
+        count++;
+     
+     }
+    }
+    console.log("this appears: " + count +" times.");
+ } 
 //
 // Your functions here...
 //
@@ -75,7 +87,7 @@ const palidrome = (string) => {
 return retval;
 }
 const main = async () => {
-    ex4();
+    ex5();
 }
 
 main();
