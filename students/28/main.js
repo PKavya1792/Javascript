@@ -14,7 +14,7 @@ const ex2 = () => {
 }
 
 const ex3 = () => {
-    const array1 = [1, 2, 3, 4, 5];
+    const array1 = [1, 2, 3, 4, 5, 6];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
 }
@@ -24,15 +24,10 @@ const ex3 = () => {
 //
 
 const interleave = (array1, array2) => {
-    let retval = 'ERROR: Array length mismatch';
-    if (array1.length == array2.length) {
-        retval = '';
-        for (let i = 0; i < array1.length; i++) {
-            retval += array1[i] + array2[i];
-        }
+    
+    if(array1.length != array2.length) {
+        return 'ERROR: Array length mismatch'
     }
-    return retval;
-
 }
 
 
