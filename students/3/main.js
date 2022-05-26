@@ -3,6 +3,7 @@
 // Date: 5/24/2022
 // 
 
+
 const ex1 = () => {
     const array = [1, '2', 3, 'test', 1.2];
     console.log(countNumbers(array));
@@ -22,6 +23,13 @@ const ex3 = () => {
 
 const countNumbers = (array) => {
     let retval = 0;
+    for (const iterator of array) {
+        if(typeof(iterator) == 'number'){           
+            retval += 1;
+        }
+         
+        
+    }
     // TODO...
     return retval;
 }
