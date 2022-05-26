@@ -29,9 +29,11 @@ const ex4 = () => {
     console.log(palindrome('month'));
 }
 
-
-           
-
+const ex5 = () => {
+    let str = "today this is a this is a this is a test.";
+    console.log(numberOfWord(str,'this')); 
+    
+}
 
 //
 // Your functions here...
@@ -67,11 +69,22 @@ const palindrome = (string) => {
     if(string == str)  retval= "true";
     return retval;
     }
+
+    const numberOfWord = (string,word) => {
+        let retval = 0;
+        let stringArray = string.split(" ");
+        for(let i = 0; i < stringArray.length; i++){
+            if(stringArray[i] == word) retval++
+        }
+        return retval;
+        }
+
 const main = async () => {
     //ex1();
     //ex2();
     //ex3();
-    ex4();
+    //ex4();
+    ex5();
 }
 
 main();
