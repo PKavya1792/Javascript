@@ -28,6 +28,11 @@ const ex5 = () => {
     let str = "today this is a this is a this is a test.";
     console.log( `this appears: ${(countOccurences(str, "this"))} times.`)
 }
+
+const ex6 = () => {
+   const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
 //
 // Your functions here...
 //
@@ -43,7 +48,7 @@ const countNumbers = (array) => {
 };
 
 const minNumber = (array) => {
-  let retval = array[0];  //initializing retval as the first element
+  let retval = array[0]  //initializing retval as the first element
   for (let i = 1; i < array.length; i++) { // Going through each element of the array and compare it
     if (array[i] < retval) {  //  If it’s smaller then stored one then replace it.
       retval = array[i];
@@ -81,8 +86,25 @@ const countOccurences = (String,word) => {
  return String.split(word).length -1  //splits the string and puts those substrings into an array,
 }                                     // then, it determines the count by using the length of the resulting array.
 
+const longestString = (array) => {
+  let longest = 0;
+  let lgth = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > lgth) { //if the length of the index of the array is greater than lgth
+      longest = array[i];         // then longest will become said index of that array
+    }
+  }
+  return longest;
+};
+    
+
 const main = async () => {
-  ex5();
+ // ex1();
+  //ex2();
+  //ex3();
+  //ex4();
+  //ex5();
+  ex6();
 };
 
 main();
