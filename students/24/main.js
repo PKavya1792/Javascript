@@ -39,6 +39,10 @@ const ex4 = () => {
     }
     console.log("this appears: " + count +" times.");
  } 
+ const ex6 = () =>{
+    const  array=['this', 'is', 'a', 'test', 'happy'];
+     console.log(longestString(array));
+ }
 //
 // Your functions here...
 //
@@ -86,8 +90,17 @@ const palidrome = (string) => {
     
 return retval;
 }
+const longestString = (array) =>{
+    let longest = array[0];
+    for(const words of array){
+    if(longest.length<words.length){
+        longest = words;
+    }
+}
+    return longest;
+}
 const main = async () => {
-    ex5();
+    ex6();
 }
 
 main();
