@@ -22,9 +22,15 @@ const ex3 = () => {
 
 const countNumbers = (array) => {
     let retval = 0;
-    // TODO...
-    return retval;
+   for (let i = 0; i < array.length; i++) {
+       if (typeof(array[i]) === 'number') {
+           retval++
+       }
+   }
+    return retval
 }
+
+
 
 const main = async () => {
     ex1();
