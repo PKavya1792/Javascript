@@ -196,6 +196,28 @@ const ex10 = () =>{
 //
 const countLetters = (array) =>{
     return array.toString().replace(/,/g,'').length
+   
+}
+
+//
+//ex11
+//
+const ex11 = () =>{
+    let arr = ['dog', 3, 7, 'cat', 13, 'car'];
+    console.log(numbersOnly(arr));
+}
+
+//
+//Functions
+//
+const numbersOnly = array =>{
+    const numArray = new Array;
+    for (let i = 0; i < array.length; i++){
+        if (typeof array[i] === 'number'){
+            numArray.push(array[i])
+        }    
+    }
+    return numArray
 }
 
 //
@@ -212,7 +234,8 @@ const main = async () => {
     //ex7();
     //ex8();
     //ex9();
-    ex10();
+    //ex10();
+    ex11();
 }
 
 main();
