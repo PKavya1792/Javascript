@@ -61,11 +61,30 @@ const interleave = (array1, array2) => {
     return retval
 }
 
+const ex4 = () => {
+console.log(palidrome('radar'));
+console.log(palidrome('month'));
+}
+
+//
+// ex4
+//
+const palidrome = String => {
+    let reversedString = String.split("").reverse().join("")
+    if (String == reversedString) {
+        return "true"
+    }
+    else{
+        return "false"
+    }
+}
+
 
 const main = async () => {
     // ex1();
     // ex2();
     ex3();
+    ex4();
 }
 
 main();
