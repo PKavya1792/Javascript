@@ -14,7 +14,9 @@ const ex2 = () => {
 };
 
 const ex3 = () => {
-  // TODO...
+    const array1 = [1, 2, 3, 4, 5];
+    const array2 = ['a', 'b', 'c', 'd', 'e'];
+    console.log(interleave(array1, array2));
 };
 
 //
@@ -41,8 +43,23 @@ const minNumber = (array) => {
     return retval
 }
 
+const interleave = (array1, array2) => {
+    let retval = 0
+    if (array1.length == array2.length) {
+        retval = [];
+        for (let i = 0; i < array2.length; i++) {
+          retval.push(array1[i], array2[i]);
+        }
+        return retval;
+      }
+      else{ (array1.length != array2.length)
+        retval = "ERROR: Array length mismatch"
+        return retval
+      }
+}
+
 const main = async () => {
-  ex2();
+  ex3();
 };
 
 main();
