@@ -43,6 +43,12 @@ const ex7 = () => {
     let n = [1, 3, 6, 3, 6, 10];
     console.log(sort(n));
 }
+
+const ex8 = () => {
+    let words = "Count the words in this string";
+    console.log(countWords(words));
+
+}
 //
 // Your functions here...
 //
@@ -106,7 +112,15 @@ const palindrome = (string) => {
          return array;
      }
 
-
+    const countWords = (string) => {
+        let retval = 0;
+        let strSplit = string.split(" ");
+        for(let i = 0; i < strSplit.length; i++){
+            retval++;
+       }
+        return retval;
+        
+    }
 
 const main = async () => {
     //ex1();
@@ -115,7 +129,8 @@ const main = async () => {
     //ex4();
     // ex5();
     //ex6();
-    ex7();
+    //ex7();
+    ex8();
 }
 
 main();
