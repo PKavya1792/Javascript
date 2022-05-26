@@ -9,7 +9,7 @@ const main = async () =>{
     // ex3();
     // ex4();
     // ex5();
-    // ex6();
+     ex6();
     // ex7();
     // ex8();
     // ex9();
@@ -90,18 +90,14 @@ let ex5 = () => {
 }
 
 let ex6 = () => {
-    let array = ['this', 'is', 'a', 'test', 'happy'];
+    let array = ['this', 'is', 'a','happy', 'test' ];
     console.log(longestString(array));
 }
 
 const longestString = (array) => {
-    let long = "";
-    for(let i = 0; i < array.length; i++){
-        if(array[i].length > long.length){
-            long = array[i]
-        }
-    }
-    return long;
+    return array.sort(function (a, b) {
+        return a.length - b.length;
+    })[array.length -1]
 }
 
 let ex7 = () => {
