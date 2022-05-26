@@ -24,6 +24,14 @@ const ex3 = () => {
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
 }
+const ex4 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+}
+
+
+           
+
 
 //
 // Your functions here...
@@ -52,10 +60,18 @@ const minNumber = (array) => {
  }
     else return "ERROR: Array length mismatch";
 }
+
+const palindrome = (string) => {
+    let retval = "false";
+    const str = string.split("").reverse().join("");
+    if(string == str)  retval= "true";
+    return retval;
+    }
 const main = async () => {
     //ex1();
-   //ex2();
-   ex3();
+    //ex2();
+    //ex3();
+    ex4();
 }
 
 main();
