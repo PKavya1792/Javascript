@@ -143,10 +143,17 @@ const ex10 = () => {
 }
 //func 10
 const countLetters = array => {
-    let result = 0;
-    for (let x of array) {
-        result += x.length;
-    } return result;
+    return array.join("").length;
+}
+
+//ex 11
+const ex11 = () => {
+    const arr = ['dog', 3, 7, 'cat', 13, 'car'];
+    console.log(numbersOnly(arr));
+}
+//func 11
+const numbersOnly = array => {
+    return array.filter(i => typeof i === 'number');
 }
 
 const main = async () => {
@@ -159,7 +166,8 @@ const main = async () => {
     //ex7();
     //ex8();
     //ex9();
-    ex10();
+    //ex10();
+    ex11();
 }
 
 main();
