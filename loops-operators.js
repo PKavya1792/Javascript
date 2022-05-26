@@ -22,7 +22,7 @@ const loops = () => {
     console.log("*".repeat(5));
 
     // For of.
-    const fruits = ['banna', 'apple', 'orange'];
+    const fruits = ['banana', 'apple', 'orange'];
     let text2 = "";
     for (let f of fruits) {
        console.log(f);
