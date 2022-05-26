@@ -56,6 +56,16 @@ const ex9 = () => {
   console.log(countS(a));
 };
 
+const ex10 = () => {
+  var array = ["this", "is", "a", "test"];
+  console.log(countLetters(array));
+};
+
+const ex11 = () => {
+  let arr = ["dog", 3, 7, "cat", 13, "car"];
+  console.log(numberOnly(arr));
+};
+
 //
 // Your functions here...
 //
@@ -154,10 +164,39 @@ const countWords = (words) => {
 
 //9
 
-const countS = (a) => {};
+const countS = (a) => {
+  let retval = 0;
+
+  let arr = a.split(" ");
+  for (let i of arr) {
+    if (i.endsWith("s")) {
+      retval++;
+    }
+  }
+  return retval;
+};
+
+//10
+const countLetters = (array) => {
+  let retval = array.join("");
+  return retval.length;
+};
+
+//11
+const numberOnly = (arr) => {
+  let retval = [];
+
+  for (let num of arr) {
+    if (typeof num === "number") {
+      retval.push(num);
+    }
+  }
+
+  return retval;
+};
 
 const main = async () => {
-  ex8();
+  ex11();
 };
 
 main();
