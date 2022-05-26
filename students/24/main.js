@@ -36,9 +36,13 @@ const countNumbers = (array) => {
     return retval;
 }
 const minNumber = (array) => {
-    let retval =0;
+    let retval =array[0];
     for(const num of array){
-        retval = Math.min(...array);
+       // retval = Math.min(...array);
+        if(num < retval){
+             retval=num;
+        }
+        
     }
     return retval;
 }
@@ -58,7 +62,7 @@ const interleave = (array1, array2) => {
     return retval;
 }
 const main = async () => {
-    ex3();
+    ex2();
 }
 
 main();
