@@ -4,36 +4,45 @@
 // Wendy's Branch
 
 const ex1 = () => {
-    const array = [1, '2', 3, 'test', 1.2];
-    console.log(countNumbers(array));
-}
+  const array = [1, "2", 3, "test", 1.2];
+  console.log(countNumbers(array));
+};
 
 const ex2 = () => {
-    // TODO...
-}
+    const array = [12, 55, 2, 22, 11];
+    console.log(minNumber(array));
+};
 
 const ex3 = () => {
-    // TODO...
-}
+  // TODO...
+};
 
 //
 // Your functions here...
 //
 
 const countNumbers = (array) => {
-    let retval = 0;
-   for (let i = 0; i < array.length; i++) {
-       if (typeof(array[i]) === 'number') {
-           retval++
-       }
-   }
+  let retval = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === "number") {
+      retval++;
+    }
+  }
+  return retval;
+};
+
+const minNumber = (array) => {
+    let retval = array[0]
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < retval) {
+            retval = array[i]
+        }
+    }
     return retval
 }
 
-
-
 const main = async () => {
-    ex1();
-}
+  ex2();
+};
 
 main();
