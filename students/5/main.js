@@ -109,6 +109,16 @@ const sort = n => {
     return n.sort((a, b) => a - b);
 }
 
+//ex 8
+const ex8 = () => {
+    const words = "Count the words in this string";
+    console.log(countWords(words));
+}
+//func 8
+const countWords = words => {
+    return words.split(" ").length;
+}
+
 const main = async () => {
     //ex1();
     //ex2();
@@ -116,7 +126,8 @@ const main = async () => {
     //ex4();
     //ex5();
     //ex6();
-    ex7();
+    //ex7();
+    ex8();
 }
 
 main();
