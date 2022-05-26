@@ -42,12 +42,20 @@ const minNumber = (array) => {
     array.sort(function(a, b) {return a-b});
      return array[0];
  }
- 
- 
+ const interleave = (array1,array2)=> {
+    let array = [];
+    if(array1.length == array2.length){
+    for (let i=0; i<array1.length; i++){
+         array.push(array1[i], array2[i]);
+        }   
+        return array;
+ }
+     
+}
 const main = async () => {
     //ex1();
-   ex2();
-   //ex3();
+   //ex2();
+   ex3();
 }
 
 main();
