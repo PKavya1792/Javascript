@@ -7,12 +7,10 @@ const ex1 = () => {
     const array = [1, '2', 3, 'test', 1.2];
     console.log(countNumbers(array));
 }
-
 const ex2 = () => {
     const array = [12, 55, 2, 22, 11];
     console.log(minNumber(array));
 }
-
 const ex3 = () => {
     const array1 = [1, 2, 3, 4, 5];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
@@ -39,6 +37,10 @@ const ex6 = () =>{
 const ex7 = () =>{
     let n = [1, 3, 6, 3, 6, 10];
     console.log(sort(n));
+}
+const ex8 = () => {
+    let words = "Count the words in this string";
+    console.log(countWords(words));
 }
 
 //
@@ -98,7 +100,6 @@ const wordRepeater = (word) =>{
     return retval
 }
 const longestString = (array) =>{
-    
     let temp = ""
     for(const word of array){
         if(word.length > temp.length)
@@ -107,7 +108,6 @@ const longestString = (array) =>{
     return temp
 }
 const sort = (n) =>{
-    
     for (let i = 0; i < n.length; i++) { 
         for(let j = i + 1; j < n.length; j++){
             if(n[j] < n[i]){
@@ -117,8 +117,16 @@ const sort = (n) =>{
             }
         }
     }
-  
     return n;
+}
+const countWords = (words) =>{
+    let retval = 0;
+    const wordsSplit = words.split(' ')
+    for (const word of wordsSplit) {
+        retval += 1
+    }
+    return retval
+
 }
 
 const main = async () => {
@@ -129,6 +137,7 @@ const main = async () => {
     ex5();
     ex6();
     ex7();
+    ex8();
 }
 
 main();
