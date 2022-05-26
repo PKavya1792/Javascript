@@ -22,6 +22,11 @@ const ex3 = () => {
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
 }
+const ex4 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+}
+
 
 //
 // Your functions here...
@@ -59,14 +64,20 @@ const interleave = (array1, array2) => {
         retval += array2[i] 
     }
     return retval
-
-
 } 
+
+const palindrome = ( word) => {
+    let re = /[\W_]/g
+    let lowerWord = word.toLowerCase().replace(re, '')
+    let reverword = lowerWord.split('').reverse().join('')
+    return lowerWord == reverword
+}
 
 const main = async () => {
     ex1();
     ex2();
     ex3();
+    ex4();
 }
 
 main();
