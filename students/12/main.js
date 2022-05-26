@@ -113,7 +113,90 @@ const countThis = (str) =>{
     return `this appears: ${(splitter.length - (splitter.filter(word => word != 'this').length))} times`
 }
 
+//
+//ex6
+//
+const ex6 = () => {
+    const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
 
+//
+//Functions
+//
+const longestString = (array) => {   
+    let retval = ''
+    for (let i = 0; i < array.length; i++){
+        if (array[i].length > retval.length){
+            retval = array[i]
+        }
+    }
+    return retval
+   
+}
+
+//
+//ex7
+//
+const ex7 = () =>{
+    let n = [1, 3, 6, 3, 6, 10];
+    console.log(sort(n));
+}
+
+//
+//Functions
+//
+const sort = array =>{
+    const sorted = array.sort(function(a,b){
+        return a - b
+    });
+    return sorted
+}
+
+//
+//ex8
+//
+const ex8 = () =>{
+    let words = "Count the words in this string";
+    console.log(countWords(words));
+}
+
+//
+//Function
+//
+const countWords = str =>{
+    return str.split(" ").length
+}
+
+//
+//ex9
+//
+const ex9 = () =>{
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));
+}
+
+//
+//Functions
+//
+const countS = str =>{    
+    return str.split(" ").filter(word => word.charAt(word.length - 1) == 's').length
+}
+
+//
+//ex10
+//
+const ex10 = () =>{
+    var array = ["this", "is", "a", "test"];
+    console.log(countLetters(array));
+}
+
+//
+//Functions
+//
+const countLetters = (array) =>{
+    return array.toString().replace(/,/g,'').length
+}
 
 //
 //Main
@@ -124,7 +207,12 @@ const main = async () => {
     //ex2();
     //ex3();
     //ex4();
-    ex5();
+    //ex5();
+    //ex6();
+    //ex7();
+    //ex8();
+    //ex9();
+    ex10();
 }
 
 main();
