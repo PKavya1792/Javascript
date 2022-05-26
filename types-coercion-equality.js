@@ -78,7 +78,7 @@ const typesReference = () => {
 }
 
 const coercion = () => {
-    // AKA: casting
+   
     const a = "1";
     const b = 2;
     let result = a + b; // <== JavaScript coerced (casted) the number to a string.
