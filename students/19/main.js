@@ -39,7 +39,10 @@ const ex6 = () => {
     console.log(longestString(array));
 }
 
-
+const ex7 = () => {
+    let n = [1, 3, 6, 3, 6, 10];
+    console.log(sort(n));
+}
 //
 // Your functions here...
 //
@@ -98,6 +101,11 @@ const palindrome = (string) => {
         return longestWord;
     }
 
+    const sort = (array) => {
+        array.sort(function(a, b){return a - b}); 
+         return array;
+     }
+
 
 
 const main = async () => {
@@ -106,7 +114,8 @@ const main = async () => {
     //ex3();
     //ex4();
     // ex5();
-     ex6();
+    //ex6();
+    ex7();
 }
 
 main();
