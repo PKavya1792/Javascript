@@ -126,10 +126,11 @@ const countString = (str) => {
 
   for (let word of arr) {
     if (word === "this") {
-      retval++;
+      retval++
+      
     }
   }
-  return retval;
+  return "this appears:" + retval +" times."
 };
 
 //6
