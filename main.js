@@ -19,6 +19,10 @@ const ex3 = () => {
     console.log(interleave(array1, array2));
 }
 
+const ex4 = () => {
+    console.log(palidrome('radar'));
+    console.log(palidrome('month'));
+}
 //
 // Your functions here...
 //
@@ -51,12 +55,26 @@ const interleave = (array1, array2) =>{
     }
     return retval;
 }
+const palidrome = (string) => {
+    let retval = true;
+    for(let i = 0; i <= string.length/2; i++){
+        if(string[i]==string[string.length - i - 1]){
+            retval = true;
+        }
+        else{
+            retval = false;
+            break;
+        }
+    }
+    return retval;
+}
 
 
 const main = async () => {
    // ex1();
     //ex2();
-    ex3();
+    // ex3();
+    ex4();
 }
 
 main();
