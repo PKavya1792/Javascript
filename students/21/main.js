@@ -30,6 +30,21 @@ const ex4 = () => {
     console.log(palidrome('month'));
 }
 
+const ex5 = () => {
+    let str = "today this is a this is a this is a test.";
+    console.log(thisCounter(str))
+}
+
+const ex6 = () => {
+    let array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
+
+const ex7 = () => {
+    let n = [1, 3, 6, 3, 6, 10];
+    console.log(sort(n));
+}
+
 
 //
 // Your functions here...
@@ -75,14 +90,46 @@ let i = 0
     }
     
 const palidrome = (string) => {
-    let revArray = Array.from(string)
-    let reverse = revArray.reverse
-    return reverse
+    
+    let array = Array.from(string)
+    let reversed = array.reverse()
+    let revString = reversed.toString()
+    let revString2 =revString.replaceAll(',','')
+    let isPalindrome = true
+    if(revString2!==string){
+        isPalindrome=false
+    }
+    return isPalindrome
 }
 
+const thisCounter = (string) => {
+    let array = string.split(' ')
+    let thisCount = 0;
+    for(let i = 0; i<array.length; i++){
+        if(array[i]=='this'){
+            thisCount++
+        }
+    }
+    return 'The word \"this\" occurs: ' +thisCount +' times.'
+}
+
+const longestString = (array) => {
+    let longest = array[0]
+    for(let i = 0; i<array.length; i++){
+        if (array[i].length>longest.length){
+            longest = array[i]
+        }
+    }
+    return longest
+}
+
+const sort = (array) => {
+    array.sort(function(a,b){return a-b})
+    return array
+}
 
 const main = async () => {
-    ex4();
+    ex7();
 }
 
 main();
