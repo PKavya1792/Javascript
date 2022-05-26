@@ -14,13 +14,13 @@ const ex2 = () => {
 }
 
 const ex3 = () => {
-    // const array1 = [1, 2, 3, 4, 5];
-    // const array2 = ['a', 'b', 'c', 'd', 'e'];
-    // console.log(interleave(array1, array2));
-
-    const array1 = [1, 2];
+    const array1 = [1, 2, 3, 4, 5];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
+
+    // const array1 = [1, 2];
+    // const array2 = ['a', 'b', 'c', 'd', 'e'];
+    // console.log(interleave(array1, array2));
 }
 const ex4 = () => {
     console.log(palindrome('radar'));
@@ -35,6 +35,10 @@ const ex5 = () => {
 const ex6 = () =>{
     const array = ['this', 'is', 'a', 'test', 'happy'];
     console.log(longestString(array));
+}
+const ex7 = () =>{
+    let n = [1, 3, 6, 3, 6, 10];
+    console.log(sort(n));
 }
 
 //
@@ -53,9 +57,11 @@ const countNumbers = (array) => {
 const minNumber = (array) => {
     let retval = 0;
     for (const element of array) {
-        if(element > retval){
+        if(element < retval){
             retval = element;
         } 
+        else if(retval == 0)
+        retval = element
     }
     return retval;
 }
@@ -100,6 +106,20 @@ const longestString = (array) =>{
     }
     return temp
 }
+const sort = (n) =>{
+    
+    for (let i = 0; i < n.length; i++) { 
+        for(let j = i + 1; j < n.length; j++){
+            if(n[j] < n[i]){
+                let temp = n[i]
+                n[i] = n[j]
+                n[j] = temp
+            }
+        }
+    }
+  
+    return n;
+}
 
 const main = async () => {
     ex1();
@@ -108,6 +128,7 @@ const main = async () => {
     ex4();
     ex5();
     ex6();
+    ex7();
 }
 
 main();
