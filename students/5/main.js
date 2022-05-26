@@ -54,10 +54,26 @@ const interleave = (array1, array2) => {
     } return result;
 }
 
+//ex 4
+const ex4 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+}
+//func 4
+const palindrome = string => {
+    let result = '';
+    if (string == string.split('').reverse().join('')) {
+        result = 'true';
+    } else if (string != string.split('').reverse().join('')) {
+        result = 'false';
+    } return result;
+}
+
 const main = async () => {
     //ex1();
     //ex2();
-    ex3();
+    //ex3();
+    ex4();
 }
 
 main();
