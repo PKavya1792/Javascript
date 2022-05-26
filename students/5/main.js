@@ -136,6 +136,19 @@ const countS = a => {
     } return result;
 }
 
+//ex 10
+const ex10 = () => {
+    const array = ["this", "is", "a", "test"];
+    console.log(countLetters(array));
+}
+//func 10
+const countLetters = array => {
+    let result = 0;
+    for (let x of array) {
+        result += x.length;
+    } return result;
+}
+
 const main = async () => {
     //ex1();
     //ex2();
@@ -145,7 +158,8 @@ const main = async () => {
     //ex6();
     //ex7();
     //ex8();
-    ex9();
+    //ex9();
+    ex10();
 }
 
 main();
