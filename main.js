@@ -42,7 +42,7 @@ const ex6 = () => {
 }
 
 const ex7 = () => {
-    let n = [1, 3, 6, 3, 6, 10];
+    let n = [1, -3, 6, 3, 6, 10];
     console.log(sort(n));
 }
 
@@ -50,8 +50,10 @@ const ex8 = () => {
     let words = "Count the words in this string";
     console.log(countWords(words));
 }
-
-
+const ex9 = () => {
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));
+}
 
 //
 // Your functions here...
@@ -112,7 +114,22 @@ const longestString = (array) =>{
 }
 const sort = (array) =>{
     return array.sort(function(a, b){return a - b});
-    
+}
+
+const countWords = (string) =>{
+    let stringArray = string.split(" ");
+    return stringArray.length;
+}
+
+const countS = (string) => {
+    let stringArray = string.split(" ");
+    let wordCount = 0;
+    for(let i = 0; i < stringArray.length; i++){
+        if(stringArray[i][stringArray[i].length - 1] == 's'){
+            wordCount++;
+        }
+    }
+    return wordCount;
 }
 
 const main = async () => {
@@ -123,7 +140,8 @@ const main = async () => {
     // ex5();
     // ex6();
     // ex7();
-    ex8();
+    // ex8();
+    ex9();
 }
 
 main();
