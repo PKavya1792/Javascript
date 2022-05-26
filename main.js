@@ -74,6 +74,20 @@ const ex12 = () =>{
     console.log(c.getHistory())
 }
 
+const ex13 = () =>{
+    let dict = [
+        { "firstName": "joe", "lastName": "smith", age: 10 },
+        { "firstName": "paul", "lastName": "simmon", age: 20 },
+        { "firstName": "fred", "lastName": "jones", age: 30 },
+    ]
+    let totalAge = 0;
+    for(let i of dict){
+        totalAge += i.age;
+    }
+    
+    console.log('The total age is: ' + totalAge);
+}
+
 //
 // Your functions here...
 //
@@ -211,7 +225,8 @@ const main = async () => {
     // ex9();
     // ex10();
     // ex11();
-    ex12();
+    // ex12();
+    ex13();
 }
 
 main();
