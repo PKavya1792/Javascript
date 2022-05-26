@@ -69,11 +69,36 @@ const palindrome = string => {
     } return result;
 }
 
+//ex 5
+const ex5 = () => {
+    let str = "today this is a this is a this is a test.";
+    console.log(`this appears: ${thisCounter(str)} times.`);
+}
+//func 5
+const thisCounter = string => {
+    let result = 0;
+    const value = "this";
+    const splitString = string.split(" ");
+    result = splitString.filter(i => i === value).length;
+    return result;
+}
+
+//ex 6
+const ex6 = () => {
+    array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
+//func 6
+const longestString = array => {
+    
+}
+
 const main = async () => {
     //ex1();
     //ex2();
     //ex3();
-    ex4();
+    //ex4();
+    ex5();
 }
 
 main();
