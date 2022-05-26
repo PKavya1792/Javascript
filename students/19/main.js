@@ -42,11 +42,11 @@ const minNumber = (array) => {
     array.sort(function(a, b) {return a-b});
      return array[0];
  }
-
+ 
  
 const main = async () => {
-    ex1();
-   //ex2();
+    //ex1();
+   ex2();
    //ex3();
 }
 
