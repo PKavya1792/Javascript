@@ -26,6 +26,11 @@ const ex4 = () => {
     console.log(palindrome('radar'));
     console.log(palindrome('month'));
 }
+const ex5 = () => {
+    let str = "today this is a this is a this is a test.";
+    console.log(wordRepeater(str))
+
+}
 
 
 //
@@ -72,12 +77,23 @@ const palindrome = ( word) => {
     let reverword = lowerWord.split('').reverse().join('')
     return lowerWord == reverword
 }
+const wordRepeater = (word) =>{
+    let retval = 0;
+    const wordArray = word.split(' ')
+    for (const element of wordArray) {
+        if(element == 'this'){
+            retval++
+        }  
+    }
+    return retval
+}
 
 const main = async () => {
     ex1();
     ex2();
     ex3();
     ex4();
+    ex5();
 }
 
 main();
