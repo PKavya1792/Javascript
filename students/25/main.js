@@ -49,6 +49,11 @@ const ex9 = () =>{
     console.log(countS(a));
 }
 
+const ex10 = () =>{
+    var array = ["this", "is", "a", "test"];
+    console.log(countLetters(array));
+}
+
 //
 // Your functions here...
 //
@@ -140,18 +145,30 @@ const countS = (String) =>{
      }
      return count
  }
-    
+
+ const countLetters = (array) => {
+    /* let count = 0;
+    count = array.map(entry => 
+        Array.from(entry).reduce((counter, notCh) =>         WORK IN PROGRESS
+        notCh === ',' ? counter : counter + 1 , 0
+    ));
+    return count*/
+    return array.join("").length;
+ }
+ 
+
 
 const main = async () => {
  // ex1();
-  //ex2();
-  //ex3();
-  //ex4();
-  //ex5();
-  //ex6();
+ // ex2();
+ // ex3();
+ // ex4();
+ // ex5();
+ // ex6();
  // ex7();
- //ex8()
- ex9()
+ // ex8();
+ // ex9();
+  ex10();
 };
 
 main();
