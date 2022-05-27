@@ -6,14 +6,13 @@
 //ex 1
 const ex1 = () => {
     const array = [1, '2', 3, 'test', 1.2];
-    console.log(countNumbers(array));
+    console.log(countNumbers1(array));
 }
-//func 1
-const countNumbers = (array) => {
+//func 1 & func 11B
+const countNumbers1 = (array) => {
     let retval = 0;
-    const COMPARISON_NUMBER = 1;
     for (let x of array) {
-        if (typeof(x) === typeof(COMPARISON_NUMBER)) {
+        if (typeof(x) === 'number') {
             retval++;
         }
     } return retval;
@@ -148,16 +147,84 @@ const countLetters = array => {
 
 //ex 11
 const ex11 = () => {
-    const arr = ['dog', 3, 7, 'cat', 13, 'car'];
-    console.log(numbersOnly(arr));
+    let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "numbers"));
+    console.log(countIt(array, "strings"));
+    console.log(countIt(array, "decimals"));
 }
-//func 11
-const numbersOnly = array => {
-    return array.filter(i => typeof i === 'number');
+//func 11A
+const countIt = (array, string) => {
+    if (string == "numbers"){
+        return countNumbers11(array)
+    }
+    else if (string == "strings"){
+        return countStrings(array)
+    }
+    else if (string == "decimals"){
+        return countDecimals(array)
+    }
+}
+//func 11B
+const countNumbers11 = (array) => {
+    let retval = 0;
+    for (let x of array) {
+        if (typeof(x) === 'number' && x % 1 == 0) {
+            retval++;
+        }
+    } return retval;
+}
+//func 11C
+const countStrings = array => {
+    let retval = "";
+    for (let x of array) {
+        if (typeof(x) === 'string') {
+            retval++;
+        }
+    } return retval;
+}
+//func 11D
+const countDecimals = array => {
+    let retval = 0;
+    for (let x of array) {
+        if (typeof(x) === 'number' && x % 1 != 0) {
+            retval++;
+        }
+    } return retval;
 }
 
 //ex 12
 const ex12 = () => {
+    let result = 0;
+    let sum = 0;
+    const dict = [
+        { "firstName": "joe", "lastName": "smith", age: 10 },
+        { "firstName": "paul", "lastName": "simmon", age: 20 },
+        { "firstName": "fred", "lastName": "jones", age: 30 },
+    ]
+    result = dict.map(a => a.age);
+    for (let i = 0; i < result.length; i++) {
+        sum += result[i];
+    }
+    console.log(`The total age is: ${sum}.`);
+}
+
+//ex 13
+const ex13 = () => {
+    let customers = [{
+        name: 'ABC Inc',
+        credit: 100
+    }, {
+        name: 'ACME Corp',
+        credit: 200
+    }, {
+        name: 'IoT AG',
+        credit: 300
+    }];
+    console.log(customers.find(i => i.credit === 200));
+}
+
+//ex 14
+const ex14 = () => {
     const c = new Calculator();
     c.add(1,2);
     c.sub(4,1);
@@ -165,7 +232,7 @@ const ex12 = () => {
     c.mul(2,2)
     console.log(c.getHistory())
 }
-//func 12
+//class 14
 class Calculator {
     constructor() {
         this.history = [];
@@ -189,37 +256,6 @@ class Calculator {
     getHistory() {
         return this.history.join('\r\n');
     }
-}
-
-//ex 13
-const ex13 = () => {
-    let result = 0;
-    let sum = 0;
-    const dict = [
-        { "firstName": "joe", "lastName": "smith", age: 10 },
-        { "firstName": "paul", "lastName": "simmon", age: 20 },
-        { "firstName": "fred", "lastName": "jones", age: 30 },
-    ]
-    result = dict.map(a => a.age);
-    for (let i = 0; i < result.length; i++) {
-        sum += result[i];
-    }
-    console.log(`The total age is: ${sum}.`);
-}
-
-//ex 14
-const ex14 = () => {
-    let customers = [{
-        name: 'ABC Inc',
-        credit: 100
-    }, {
-        name: 'ACME Corp',
-        credit: 200
-    }, {
-        name: 'IoT AG',
-        credit: 300
-    }];
-    console.log(customers.find(i => i.credit === 200));
 }
 
 const main = async () => {
