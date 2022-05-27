@@ -18,10 +18,29 @@ const ex3 = () => {
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
 }
-
+const ex4 = () => {
+    console.log(palidrome('radar'));
+    console.log(palidrome('month'));
+}
 //
 // Your functions here...
 //
+
+const palidrome = (word) => {
+    let retval = true
+
+    const input = word.split("")
+    const reverseArray = input.reverse("")
+    const reversedWord = reverseArray.join("")
+
+if(reversedWord !== word)  {
+    retval = false
+}
+
+    return retval
+}
+
+
 
 const interleave = (array1, array2) => {
     
@@ -53,7 +72,7 @@ const countNumbers = (array) => {
 }
 
 const main = async () => {
-    ex3();
+    ex4();
 }
 
 main();
