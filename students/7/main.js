@@ -50,6 +50,15 @@ const ex10 = () => {
     var array = ["this", "is", "a", "test"];
     console.log(countLetters(array));
 }
+const ex11 = () =>{
+    // let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    // console.log(countIt(array, "numbers"));
+
+//     let array = ['dog', 3, 7, 'cat', 13, 1.2];
+//     console.log(countIt(array, "strings"));
+    let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "decimals"));
+}
 
 //
 // Your functions here...
@@ -58,7 +67,7 @@ const ex10 = () => {
 const countNumbers = (array) => {
     let retval = 0;
     for (const element of array) {
-        if(typeof(element) == 'number'){
+        if(typeof(element) == 'number' && element % 1 == 0 /*this statement if for ex11, comment it out for ex1*/){
             retval += 1
         }
     }
@@ -135,7 +144,6 @@ const countWords = (words) =>{
     }
     return retval
 }
-
 const countS = (a) =>{
     let retval = 0
     const words = a.split(' ')
@@ -157,18 +165,48 @@ const countLetters  = (array) => {
     }
     return retval
 }
+const countIt = (array, returnVal) =>{
+    if(returnVal == "numbers"){
+        return countNumbers(array)
+    }
+    else if(returnVal == "strings"){
+        return countString(array)
+    }
+    else if(returnVal == "decimals"){
+        return countDecimal(array)
+    }
 
-const main = async () => {
-    ex1();
-    ex2();
-    ex3();
-    ex4();
-    ex5();
-    ex6();
-    ex7();
-    ex8();
-    ex9();
-    ex10();
+}
+const countString = (array) =>{
+    let retval = 0;
+    for (const element of array) {
+        if(typeof(element) == 'string'){
+            retval += 1
+        }
+    }
+    return retval;
+}
+const countDecimal = (array) =>{
+    let retval = 0;
+    for (const element of array) {
+        if(typeof(element) == 'number' && element % 1 != 0){
+            retval += 1
+        }
+    }
+    return retval;
 }
 
+const main = async () => {
+    // ex1();
+    // ex2();
+    // ex3();
+    // ex4();
+    // ex5();
+    // ex6();
+    // ex7();
+    // ex8();
+    // ex9();
+    // ex10();
+    ex11();
+}
 main();
