@@ -158,13 +158,13 @@ Output:
 Bonus points for using `map` and `reduce`.
 
 ## Ex. 11
-Create an arrow function named: `countIt` that counts the number of integer numbers, decimal numbers and strings.  This arrow function calls the following functions:
+Create an arrow function named: `countIt` that counts the number of integer numbers, decimal numbers and strings from an array.  This arrow function calls the following functions:
   - `countNumbers`
   - `countStrings`
   - `countDecimals`
 
 The fuction `countIt` accepts two parameters;
- - Input array
+ - An input array of integer numbers, decimal numbers and strings
  - A string that represents the type of things to search for (e.g. "numbers", "strings", "decimals")
 
 Usage #1:
