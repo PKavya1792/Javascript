@@ -62,8 +62,11 @@ const ex10 = () => {
 };
 
 const ex11 = () => {
-  let arr = ["dog", 3, 7, "cat", 13, "car"];
-  console.log(numberOnly(arr));
+  let arr = ['dog', 3, 7, 'cat', 13, 1.2];
+  console.log(countIt(arr,"number"));
+  console.log(countIt(arr,"strings"));
+
+  
 };
 
 //
@@ -184,17 +187,53 @@ const countLetters = (array) => {
 };
 
 //11
-const numberOnly = (arr) => {
-  let retval = [];
 
-  for (let num of arr) {
-    if (typeof num === "number") {
-      retval.push(num);
-    }
+const countIt= (arr,type) =>{
+
+    let retval=0;
+  if (type==="number") {
+    retval= countNumber(arr).length;
+  }
+
+  if (type==="strings"){
+    retval=countStrings(arr).length;
   }
 
   return retval;
+
+}
+
+const countNumber = (arr) => {
+  let retval = [];
+  
+  
+  for (let num of arr) {
+    
+    if (typeof num==='number') {
+
+      retval.push(num)
+    }
+  
+  }
+  return retval;
 };
+
+const countStrings =(arr) =>{
+
+  let retval=[];
+
+  for (let word of arr){
+    if (typeof word==="string")
+    retval.push(word)
+  }
+
+  return retval;
+
+}
+
+
+
+
 
 const main = async () => {
   ex11();
