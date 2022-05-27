@@ -11,24 +11,60 @@ const ex1 = () => {
   }
   
     const ex3 = () => {
-    const array1 = [1, 2, 3, 4, 5, 1];
+    const array1 = [1, 2, 3, 4, 5];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
 
   }
   
+  const ex4 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+  const ex5 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+  const ex6 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+  const ex7 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+  const ex8 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+  const ex9 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+  const ex10 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+  const ex11 = () => {
+    console.log(palindrome('radar'));
+    console.log(palindrome('month'));
+  }
+
+
+
   const countNumbers = (array) => {
     let retval = 0;
     for(let i of array){
         if(typeof(i)=='number'){
             retval++
         }
-     
-      
+  
     }
-    
+  
     return retval;
 }
+
+
   const minNumber = (array) => {
     let retval = array[0];
     for(let i of array){
@@ -39,27 +75,49 @@ const ex1 = () => {
                         
    }
 
-    
     return retval;
 } 
   
 
 
-
-
   const interleave = (array1, array2) => {
-    
+    let retval= "";
     if(array1.length != array2.length){
-        return `ERROR: Array length mismatch`
+        console.log(`ERROR: Array length mismatch`)
     }
     else{
-        
-    } 
-   
-} 
+        for(let i=0; i < array1.length; i++){
+                retval += array1[i] + array2[i]
+        }
+    }return retval;
+  }
+
+    const palindrome = (word) => {
+    let retval= true;
+    const input=word.split("");
+    const reverseArray = input.reverse("");
+    const reversedWord = reverseArray.join("");
+        if(reversedWord !=word){
+            retval = false;
+        }
+    return retval;
+ }
+
+ 
+    const palindrome = (word) => {
+    let retval= true;
+    const input=word.split("");
+    const reverseArray = input.reverse("");
+    const reversedWord = reverseArray.join("");
+        if(reversedWord !=word){
+            retval = false;
+        }
+    return retval;
+ }
+
   
   const main = async () => {
-    ex3();
+    ex4();
   }
   
   main();

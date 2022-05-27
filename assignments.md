@@ -61,8 +61,8 @@ Write an arrow function named: `palindrome` that returns a boolean if a string i
 
 Usage:
 ```
-console.log(palidrome('radar'));
-console.log(palidrome('month'));
+console.log(palindrome('radar'));
+console.log(palindrome('month'));
 ```
 Output:
 ```
