@@ -29,9 +29,29 @@ const ex5 = () => {
     console.log(countOccurences(text,"this"));
 }
 
+const ex6 = () => {
+    const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
+
+
 //
 // Your functions here...
 //
+
+const longestString = (array) => {
+    let lgth = 0;
+    let longest;    
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].length > lgth) {
+        let lgth = array[i].length;
+        longest = array[i];
+      }
+    }
+    return longest;
+}
+
+
 
 const countOccurences = (text, searchWord) => {
     let retval = ""
@@ -93,7 +113,7 @@ const countNumbers = (array) => {
 }
 
 const main = async () => {
-    ex5();
+    ex6();
 }
 
 main();
