@@ -32,8 +32,9 @@ const ex1 = () => {
     console.log(longestString(array));
   }
   const ex7 = () => {
-    console.log(palindrome('radar'));
-    console.log(palindrome('month'));
+    let arrayofNumbers = [1, 3, 6, 3, 6, 10];
+    console.log(sort(arrayofNumbers));
+
   }
   const ex8 = () => {
     console.log(palindrome('radar'));
@@ -92,7 +93,28 @@ const ex1 = () => {
                 retval += array1[i] + array2[i]
         }
     }return retval;
+
   }
+  
+  const palindrome = (word) => {
+
+    let retval= true;
+
+    const input=word.split("");
+
+    const reverseArray = input.reverse("");
+
+    const reversedWord = reverseArray.join("");
+
+        if(reversedWord !=word){
+
+            retval = false;
+
+        }
+
+    return retval;
+
+ }
 
    
   const countOccurrence = (text, searchWord) => {
@@ -115,10 +137,14 @@ const ex1 = () => {
    
     
  }
+    const sort = (arrayofNumbers) => {
+    const sortedArrayofNumbers=arrayofNumbers.sort((a,b)=>(a-b))
+    return sortedArrayofNumbers
+ }
 
    
   const main = async () => {
-    ex6();
+    ex4();
   }
   
   main();
