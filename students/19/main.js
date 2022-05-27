@@ -49,6 +49,10 @@ const ex8 = () => {
     console.log(countWords(words));
 
 }
+const ex9 = () => {
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));
+}
 //
 // Your functions here...
 //
@@ -112,11 +116,21 @@ const palindrome = (string) => {
          return array;
      }
 
-    const countWords = (string) => {
+    const countWords
+     = (string) => {
         let retval = 0;
         let strSplit = string.split(" ");
         for(let i = 0; i < strSplit.length; i++){
             retval++;
+       }
+        return retval;
+    }
+
+    const countS = (string) => {
+        let retval = 0;
+        let strSplit = string.split(" ");
+        for(let i = 0; i < strSplit.length; i++){
+            if(strSplit[i].endsWith("s")) retval++
        }
         return retval;
         
@@ -127,10 +141,13 @@ const main = async () => {
     //ex2();
     //ex3();
     //ex4();
-    // ex5();
+    //ex5();
     //ex6();
     //ex7();
-    ex8();
+    //ex8();
+    ex9();
+    
+
 }
 
 main();
