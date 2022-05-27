@@ -53,6 +53,10 @@ const ex9 = () => {
     var a = "this counts the number of words that end in s";
     console.log(countS(a));
 }
+const ex10 = () => {
+    var array = ["this", "is", "a", "test"];
+    console.log(countLetters(array));
+}
 //
 // Your functions here...
 //
@@ -133,7 +137,19 @@ const palindrome = (string) => {
             if(strSplit[i].endsWith("s")) retval++
        }
         return retval;
-        
+
+    }
+    const countLetters = (string) => {
+       const newArr = string.map(charFunction);
+       const count = newArr.reduce(countChar, 0);
+
+       function charFunction(num) {
+         return num.toString();
+       }
+      function countChar(total, num) {
+        return total  + num.length;
+      }
+    return count;
     }
 
 const main = async () => {
@@ -145,8 +161,8 @@ const main = async () => {
     //ex6();
     //ex7();
     //ex8();
-    ex9();
-    
+    //ex9();
+    ex10();
 
 }
 
