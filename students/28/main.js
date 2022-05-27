@@ -24,10 +24,25 @@ const ex5 = () => {
     const text = "today this is a this is a this is a test.";
     console.log(countOccurences(text, 'this'))
 }
-
+const ex6 = () => {
+    const array = ['this', 'is', 'a', 'test', 'happy']
+    console.log(longestString(array))
+}
 //
 // Your functions here...
 //
+const longestString = (array) => {
+    let longest = array[0]
+    for(let i = 0; i < array.length; i++){
+        if(array[i].length > longest.length){
+            longest = array[i]
+        }
+    }
+    return longest
+}
+
+
+
 const countOccurences = (text, searchWord) => {
     let retval = ''
     let wordCounter = 0
@@ -40,7 +55,6 @@ const countOccurences = (text, searchWord) => {
     retval = "this appears: " + wordCounter + " times"
     return retval
 }
-
 const palidrome = (word) => {
     let retval = true
 
@@ -54,16 +68,12 @@ const palidrome = (word) => {
 
     return retval
 }
-
-
 const interleave = (array1, array2) => {
     
     if(array1.length != array2.length) {
         return 'ERROR: Array length mismatch'
     }
 }
-
-
 const minNumber = (array) => {
     let retval = array[0];
     for (let i of array){
@@ -73,8 +83,6 @@ const minNumber = (array) => {
     }
     return retval 
 } 
-
-
 const countNumbers = (array) => {
     let retval = 0;
     for (let i of array){
@@ -86,7 +94,7 @@ const countNumbers = (array) => {
 }
 
 const main = async () => {
-    ex5();
+    ex6();
 }
 
 main();
