@@ -60,7 +60,7 @@ const ex10 = () => {
 
 const ex11 = () => {
     let array = ['dog', 3, 7, 'cat', 13, 1.2];
-    console.log(countIt(array, "numbers"));
+    console.log(countIt(array,"strings" ));
 }
 //
 // Your functions here...
@@ -159,13 +159,14 @@ const palindrome = (string) => {
     const countIt = (array, string) => {
         let cntr = 0;
         switch (string) {
-            case "numbers": countNumbers();
+            //case "numbers": countNumbers();
+            case "strings": countStrings();
             break;  
         }
 
-       function countNumbers (){
+       function countStrings (){
            for (let i=0;i<array.length; i++){
-               if (Number.isInteger(array[i])) cntr++;
+               if (typeof array[i] == "string") cntr++;
            }
         }
          return cntr;
