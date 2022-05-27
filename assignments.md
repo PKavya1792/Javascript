@@ -158,17 +158,46 @@ Output:
 Bonus points for using `map` and `reduce`.
 
 ## Ex. 11
-Create an arrow function named: `numberOnly` that counts the number of numbers in an array:
+Create an arrow function named: `countIt` that counts the number of integer numbers, decimal numbers and strings.  This arrow function calls the following functions:
+  - `countNumbers`
+  - `countStrings`
+  - `countDecimals`
 
-Usage:
+The fuction `countIt` accepts two parameters;
+ - Input array
+ - A string that represents the type of things to search for (e.g. "numbers", "strings", "decimals")
+
+Usage #1:
 ```
-let arr = ['dog', 3, 7, 'cat', 13, 'car'];
-console.log(numbersOnly(arr));
+let array = ['dog', 3, 7, 'cat', 13, 1.2];
+console.log(countIt(array, "numbers"));
 ```
 
 Output:
 ```
-[ 3, 7, 13 ]
+3
+```
+
+Usage #2:
+```
+let array = ['dog', 3, 7, 'cat', 13, 1.2];
+console.log(countIt(array, "strings"));
+```
+
+Output:
+```
+2
+```
+
+Usage #3:
+```
+let array = ['dog', 3, 7, 'cat', 13, 1.2];
+console.log(countIt(array, "decimals"));
+```
+
+Output:
+```
+1
 ```
 
 ## Ex. 12 
