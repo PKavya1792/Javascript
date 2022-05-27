@@ -26,10 +26,14 @@
  //   console.log(palindrome('radar'));
   //  console.log(palindrome('month'));
 //}
-const ex5 = () =>{
-    let text = "today this is a this is a this is a test.";
-    const result = countOccurences(text, "this")
-    console.log(result)
+//const ex5 = () =>{
+   // let text = "today this is a this is a this is a test.";
+   // const result = countOccurences(text, "this")
+   // console.log(result)
+//}
+const ex6 = () =>{
+    const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
 }
 
 
@@ -110,8 +114,14 @@ const countOccurences = (text, searchWord) =>{
     retval = "this appears" + wordCounter +"timees"
     return retval
 }
-const main = () => {
-    ex(5);
+const longestString = (myArray) =>{
+    const longestString = myArray[0].length
+    let retval =myArray.sort((a, b) => (a.length-b.length))
+    return retval = myArray[myArray.length -1]
 }
+const main = async () => {
+    ex6();
+}
+
 
 main();
