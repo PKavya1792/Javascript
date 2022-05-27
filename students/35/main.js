@@ -25,16 +25,26 @@ const ex4 =() => {
 }
 
 const ex5 = () => {
-    let str = "today this is a this is a this is a test.";
-    console.log(countWord(str))
+    const text = "today this is a this is a this is a test.";
+    console.log(countOccurences(text,"this"));
 }
 
 //
 // Your functions here...
 //
 
-const myArray = text.split(" ");
-
+const countOccurences = (text, searchWord) => {
+    let retval = ""
+    let wordCounter = 0;
+    const wordArray = text.split(" ");
+    for (let word of wordArray) {
+        if (searchWord == word) {
+        wordCounter++
+        }
+    }
+    retval = "This appears: " + wordCounter + " times"
+    return retval;
+}
 
 const palindrome = (word) => {
     let retval=true;
