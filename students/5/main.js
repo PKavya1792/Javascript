@@ -156,6 +156,41 @@ const numbersOnly = array => {
     return array.filter(i => typeof i === 'number');
 }
 
+//ex 12
+const ex12 = () => {
+    const c = new Calculator();
+    c.add(1,2);
+    c.sub(4,1);
+    c.div(10,2);
+    c.mul(2,2)
+    console.log(c.getHistory())
+}
+//func 12
+class Calculator {
+    constructor() {
+        this.history = [];
+    };
+    add(num1, num2) {
+        const sum = num1 + num2;
+        this.history.push(`Add: ${num1} + ${num2} = ${sum}`);
+    }
+    sub(num1, num2) {
+        const diff = num1 - num2;
+        this.history.push(`Sub: ${num1} - ${num2} = ${diff}`);
+    }
+    div(num1, num2) {
+        const quotient = num1 / num2;
+        this.history.push(`Div: ${num1} / ${num2} = ${quotient}`);
+    }
+    mul(num1, num2) {
+        const product = num1 * num2;
+        this.history.push(`Mul: ${num1} * ${num2} = ${product}`);
+    }
+    getHistory() {
+        return this.history.join('\r\n');
+    }
+}
+
 const main = async () => {
     //ex1();
     //ex2();
@@ -167,7 +202,8 @@ const main = async () => {
     //ex8();
     //ex9();
     //ex10();
-    ex11();
+    //ex11();
+    ex12();
 }
 
 main();
