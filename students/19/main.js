@@ -57,6 +57,11 @@ const ex10 = () => {
     var array = ["this", "is", "a", "test"];
     console.log(countLetters(array));
 }
+
+const ex11 = () => {
+    let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "numbers"));
+}
 //
 // Your functions here...
 //
@@ -120,8 +125,7 @@ const palindrome = (string) => {
          return array;
      }
 
-    const countWords
-     = (string) => {
+    const countWords = (string) => {
         let retval = 0;
         let strSplit = string.split(" ");
         for(let i = 0; i < strSplit.length; i++){
@@ -152,6 +156,21 @@ const palindrome = (string) => {
     return count;
     }
 
+    const countIt = (array, string) => {
+        let cntr = 0;
+        switch (string) {
+            case "numbers": countNumbers();
+            break;  
+        }
+
+       function countNumbers (){
+           for (let i=0;i<array.length; i++){
+               if (Number.isInteger(array[i])) cntr++;
+           }
+        }
+         return cntr;
+        }
+
 const main = async () => {
     //ex1();
     //ex2();
@@ -162,7 +181,8 @@ const main = async () => {
     //ex7();
     //ex8();
     //ex9();
-    ex10();
+   //ex10();
+    ex11();
 
 }
 
