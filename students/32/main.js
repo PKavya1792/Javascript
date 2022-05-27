@@ -22,12 +22,14 @@ const ex1 = () => {
     console.log(palindrome('month'));
   }
   const ex5 = () => {
-    console.log(palindrome('radar'));
-    console.log(palindrome('month'));
+    let wordArray = "today this is a this is a this is a test.";
+    const result = countOccurrence(wordArray, "this")
+    console.log(result);
+    
   }
-  const ex6 = () => {
-    console.log(palindrome('radar'));
-    console.log(palindrome('month'));
+    const ex6 = () => {
+    const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
   }
   const ex7 = () => {
     console.log(palindrome('radar'));
@@ -92,32 +94,31 @@ const ex1 = () => {
     }return retval;
   }
 
-    const palindrome = (word) => {
-    let retval= true;
-    const input=word.split("");
-    const reverseArray = input.reverse("");
-    const reversedWord = reverseArray.join("");
-        if(reversedWord !=word){
-            retval = false;
+   
+  const countOccurrence = (text, searchWord) => {
+    let retval = "";
+    let wordCounter = 0;
+    const wordArray = text.split(" ");
+    for(let word of wordArray) {
+        if(searchWord == word) {
+            wordCounter++
         }
+    }
+    retval = "This appears: " + wordCounter+ " times"
     return retval;
  }
 
- 
-    const palindrome = (word) => {
-    let retval= true;
-    const input=word.split("");
-    const reverseArray = input.reverse("");
-    const reversedWord = reverseArray.join("");
-        if(reversedWord !=word){
-            retval = false;
-        }
-    return retval;
+
+    const longestString = (array) => {
+    let retval = array.sort((a,b) => a.length - b.length);
+       return retval[array.length - 1];
+   
+    
  }
 
-  
+   
   const main = async () => {
-    ex4();
+    ex6();
   }
   
   main();
