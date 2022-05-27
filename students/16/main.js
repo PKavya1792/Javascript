@@ -22,9 +22,14 @@
 // console.log(interleave(array1, array2));
 //}
 //ex4 starts here
-const ex4 = () => {
-    console.log(palindrome('radar'));
-    console.log(palindrome('month'));
+//const ex4 = () => {
+ //   console.log(palindrome('radar'));
+  //  console.log(palindrome('month'));
+//}
+const ex5 = () =>{
+    let text = "today this is a this is a this is a test.";
+    const result = countOccurences(text, "this")
+    console.log(result)
 }
 
 
@@ -32,17 +37,6 @@ const ex4 = () => {
 // Your functions here...
 //
 
-const palindrome = (word) => {
-    let retval = true
-    const input = word.split("")
-    const reverseArray = input.reverse("")
-    const reverseWord = reverseArray.join("")
-
-    if (reverseWord !== word) {
-        retval = false
-    }
-    return retval
-}
 
 
 //
@@ -91,9 +85,33 @@ const interleave = (array1, array2) => {
     }
     return retval;
 }
+//ex 4 starts here
+const palindrome = (word) => {
+    let retval = true
+    const input = word.split("")
+    const reverseArray = input.reverse("")
+    const reverseWord = reverseArray.join("")
 
+    if (reverseWord !== word) {
+        retval = false
+    }
+    return retval
+}
+// ex5
+const countOccurences = (text, searchWord) =>{
+    let retval = ""
+    let wordCounter = 0
+    const wordArray = text.split(" ")
+    for(let word of wordArray){
+        if(searchWord == word ){
+            wordCounter++
+        }
+    }
+    retval = "this appears" + wordCounter +"timees"
+    return retval
+}
 const main = () => {
-    ex4();
+    ex(5);
 }
 
 main();
