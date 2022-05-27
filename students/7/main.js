@@ -46,6 +46,10 @@ const ex9 = () => {
     var a = "this counts the number of words that end in s";
     console.log(countS(a));
 }
+const ex10 = () => {
+    var array = ["this", "is", "a", "test"];
+    console.log(countLetters(array));
+}
 
 //
 // Your functions here...
@@ -143,6 +147,16 @@ const countS = (a) =>{
     }
     return retval
 }
+const countLetters  = (array) => {
+    let retval = 0
+    for (const words  of array) {
+        const letters = words.split('')
+        for (const letter of letters) {
+            retval += 1
+        } 
+    }
+    return retval
+}
 
 const main = async () => {
     ex1();
@@ -154,6 +168,7 @@ const main = async () => {
     ex7();
     ex8();
     ex9();
+    ex10();
 }
 
 main();
