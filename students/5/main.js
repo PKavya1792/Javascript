@@ -207,6 +207,21 @@ const ex13 = () => {
     console.log(`The total age is: ${sum}.`);
 }
 
+//ex 14
+const ex14 = () => {
+    let customers = [{
+        name: 'ABC Inc',
+        credit: 100
+    }, {
+        name: 'ACME Corp',
+        credit: 200
+    }, {
+        name: 'IoT AG',
+        credit: 300
+    }];
+    console.log(customers.find(i => i.credit === 200));
+}
+
 const main = async () => {
     //ex1();
     //ex2();
@@ -220,7 +235,8 @@ const main = async () => {
     //ex10();
     //ex11();
     //ex12();
-    ex13();
+    //ex13();
+    ex14();
 }
 
 main();
