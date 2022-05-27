@@ -62,12 +62,22 @@ const ex10 = () => {
 };
 
 const ex11 = () => {
-  let arr = ['dog', 3, 7, 'cat', 13, 1.2];
-  console.log(countIt(arr,"number"));
-  console.log(countIt(arr,"strings"));
-
-  
+  let arr = ["dog", 3, 7, "cat", 13, 1.2];
+  console.log(countIt(arr, "number"));
+  console.log(countIt(arr, "strings"));
+  console.log(countIt(arr, "decimal"));
 };
+
+const ex12=() =>{
+  let dict = [
+    { "firstName": "joe", "lastName": "smith", age: 10 },
+    { "firstName": "paul", "lastName": "simmon", age: 20 },
+    { "firstName": "fred", "lastName": "jones", age: 30 },
+]
+
+    console.log(dict)
+
+}
 
 //
 // Your functions here...
@@ -129,11 +139,10 @@ const countString = (str) => {
 
   for (let word of arr) {
     if (word === "this") {
-      retval++
-      
+      retval++;
     }
   }
-  return "this appears:" + retval +" times."
+  return "this appears:" + retval + " times.";
 };
 
 //6
@@ -188,55 +197,59 @@ const countLetters = (array) => {
 
 //11
 
-const countIt= (arr,type) =>{
-
-    let retval=0;
-  if (type==="number") {
-    retval= countNumber(arr).length;
-  }
-
-  if (type==="strings"){
-    retval=countStrings(arr).length;
+const countIt = (arr, type) => {
+  let retval = 0;
+  if (type === "number") {
+    retval = countNumber(arr);
+  } else if (type === "strings") {
+    retval = countStrings(arr).length;
+  } else if (type == "decimal") {
+    retval = countDecimal(arr);
   }
 
   return retval;
-
-}
+};
 
 const countNumber = (arr) => {
-  let retval = [];
-  
-  
-  for (let num of arr) {
-    
-    if (typeof num==='number') {
+  let retval = 0;
 
-      retval.push(num)
+  for (let num of arr) {
+    if (typeof num === "number") {
+      if (num % 1 === 0) {
+        retval++;
+      }
     }
-  
   }
   return retval;
 };
 
-const countStrings =(arr) =>{
+const countStrings = (arr) => {
+  let retval = [];
 
-  let retval=[];
-
-  for (let word of arr){
-    if (typeof word==="string")
-    retval.push(word)
+  for (let word of arr) {
+    if (typeof word === "string") retval.push(word);
   }
 
   return retval;
+};
 
-}
-
+const countDecimal = (arr) => {
+  let retval = 0;
+  for (let decimal of arr) {
+    if (typeof decimal === "number") {
+      if (decimal % 1 != 0) {
+        retval++;
+      }
+    }
+  }
+  return retval;
+};
 
 
 
 
 const main = async () => {
-  ex11();
+  ex12();
 };
 
 main();
