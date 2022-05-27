@@ -28,19 +28,32 @@ const ex6 = () => {
     const array = ['this', 'is', 'a', 'test', 'happy']
     console.log(longestString(array))
 }
-
 const ex7 = () => {
     let n = [1, 3, 6, 3, 6, 10];
     console.log(sort(n));
 }
+const ex8 = () => {
+    let words = "Count the words in this string";
+    console.log(countWords(words));
+}
 //
 // Your functions here...
 //
+const countWords = (words) => {
+   let retval = 0
+   const array = words.split(" ")
+   for (let i of array) {
+       if (typeof(i) =='string')
+       retval++
+   }
+   return retval
+}
+
+
 const sort = (arrayOfNumbers) => {
     const sortedArray = arrayOfNumbers.sort((a,b)=>a-b)
     return sortedArray
 }
-
 const longestString = (array) => {
     let longest = array[0]
     for(let i = 0; i < array.length; i++){
@@ -101,7 +114,7 @@ const countNumbers = (array) => {
 }
 
 const main = async () => {
-    ex7();
+    ex8();
 }
 
 main();
