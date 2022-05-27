@@ -12,15 +12,15 @@ const ex1 = () => {
 // Your functions here...
 //
 
-const countNumbers = (array) => {
-    let retval = 0;
-    for(let i = 0; i < array.length; i++){
-        if (typeof(array[i]) === 'number'){
-            retval++;
-        }
-    }
-    return retval;
-}
+// const countNumbers = (array) => {
+//     let retval = 0;
+//     for(let i = 0; i < array.length; i++){
+//         if (typeof(array[i]) === 'number'){
+//             retval++;
+//         }
+//     }
+//     return retval;
+// }
 
 
 //
@@ -203,22 +203,123 @@ const countLetters = (array) =>{
 //ex11
 //
 const ex11 = () =>{
-    let arr = ['dog', 3, 7, 'cat', 13, 'car'];
-    console.log(numbersOnly(arr));
+    let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "numbers"));
+    console.log(countIt(array, "strings"));
+    console.log(countIt(array, "decimals"));
 }
 
 //
 //Functions
 //
-const numbersOnly = array =>{
+const countIt = (array, String) =>{
+    if (String == "strings"){
+        return countStrings(array);
+    }
+    else if (String == "numbers"){
+        return countNumbers(array);
+    }
+    else {
+        return countDecimals(array);
+    }
+
+}
+
+const countNumbers = (array) =>{
     const numArray = new Array;
     for (let i = 0; i < array.length; i++){
-        if (typeof array[i] === 'number'){
+        if (typeof array[i] === 'number' && (array[i] - Math.floor(array[i])) == 0 ){
             numArray.push(array[i])
         }    
     }
-    return numArray
+    return numArray.length
 }
+
+const countStrings = array =>{
+    const stringArray = new Array;
+    for (let i = 0; i < array.length; i++){
+        if (typeof array[i] === 'string'){
+            stringArray.push(array[i])
+        }    
+    }
+    return stringArray.length
+}
+
+const countDecimals = array =>{
+    const decArray = new Array;
+    for (let i = 0; i < array.length; i++){
+        if (typeof array[i] === 'number' && (array[i] - Math.floor(array[i])) !== 0){ //floor rounds it down, ceiling rounds it up 
+            decArray.push(array[i])
+        }    
+    }
+    return decArray.length
+}
+
+//
+//ex12
+//
+const ex12 = () =>{
+    let dict = [
+        { "firstName": "joe", "lastName": "smith", age: 10 },
+        { "firstName": "paul", "lastName": "simmon", age: 20 },
+        { "firstName": "fred", "lastName": "jones", age: 30 },
+    ]
+    console.log(`The total age is: ${ageSum(dict)}.`)
+}
+
+//
+//Functions
+//
+const ageSum = (dict) =>{
+    let ageSumation = 0;
+    for (let i of dict){
+        ageSumation += i.age;
+    }
+    return ageSumation
+}
+
+//
+//ex13
+//
+const ex13 = () =>{
+    let customers = [{
+        name: 'ABC Inc',
+        credit: 100
+    }, {
+        name: 'ACME Corp',
+        credit: 200
+    }, {
+        name: 'IoT AG',
+        credit: 300
+    }];
+
+    console.log(find200(customers, 200))
+}
+
+//
+//Functions
+//
+const find200 = (dict, value)=>{
+    return dict.find(key => key.credit === value)
+}
+
+//
+//ex14
+//
+const ex14 = () =>{
+    const c = new Calculator();
+    c.add(1,2);
+    c.sub(4,1);
+    c.div(10,2);
+    c.mul(2,2)
+    console.log(c.getHistory())
+}
+
+//
+//Functions
+//
+
+
 
 //
 //Main
@@ -235,7 +336,10 @@ const main = async () => {
     //ex8();
     //ex9();
     //ex10();
-    ex11();
+    //ex11();
+    //ex12();
+    //ex13();
+    ex14();
 }
 
 main();
