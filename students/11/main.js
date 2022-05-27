@@ -9,12 +9,14 @@ const ex1 = () => {
 }
 
 const ex2 = () => {
-    const array = [12, 55, 2, 22, 11];
-    console.log(minNumber(array));
+  const array = [12, 55, 2, 22, 11];
+  console.log(minNumber(array));
 }
 
 const ex3 = () => {
-  // TODO...
+  const array1 = [1, 2, 3, 4, 5];
+  const array2 = ["a", "b", "c", "d", "e"];
+  console.log(interleave(array1, array2));
 }
 
 //
@@ -31,19 +33,32 @@ const countNumbers = (array) => {
   return retval;
 }
 
-const minNumber = (array)=> {
-    let retval = array[0];
-    for (let i of array) {
-        if(i<retval) {
-            retval=i
-        }
+const minNumber = (array) => {
+  let retval = array[0];
+  for (let i of array) {
+    if (i < retval) {
+      retval = i;
     }
-        return retval
+  }
+  return retval;
+}
+
+const interleave = (array1, array2) => {
+  let retval = "";
+  if (array1.length != array2.length) {
+    console.log("ERROR: Array length mismatch");
+  } else {
+    for (let i = 0; i < array1.length; i++) {
+      retval += array1[i] + array2[i];
     }
+  }
+  return retval;
+}
 
 const main = async () => {
   //ex1();
-    ex2();
+  //ex2();
+    ex3();
 }
 
 main();
