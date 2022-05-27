@@ -25,6 +25,18 @@ const ex3 = () => {
     console.log(interleave(array1, array2));
     // TODO...
 }
+const ex4 = () => {
+    console.log(palidrome('radar'));
+    console.log(palidrome('month'));
+}
+const ex5 = () => {
+    let str = "today this is a this is a this is a test.";
+    console.log(thisCounter(str))
+}
+const ex6 = () => {
+    const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
 
 //
 // Your functions here...
@@ -70,13 +82,43 @@ const interleave = (array1, array2) =>{
     }
     return retval
 }
+const palidrome = (string) =>{
+    let re = /[\W_]/g
+    let lowerWord = string.toLowerCase().replace(re, '')
+    let reverword = lowerWord.split('').reverse().join('')
+    return lowerWord == reverword
 
+
+}
+const thisCounter = (str) =>{
+    let retval = 0 
+    const sentence = str.split(' ')
+    for (const word of sentence){
+        if (word == "this"){
+            retval += 1
+        }
+    }
+    return retval
+}
+const longestString = (array) => {
+    var longest = '';
+    for(const item of array){
+        if (item.length > longest.length)
+        longest = item
+    }
+    return longest
+
+}
 
 const main = async () => {
     ex1();
     ex2();
     ex3();
+    ex4();
+    ex5();
+    ex6();
 }
+
 
 
 main();
