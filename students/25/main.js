@@ -43,6 +43,12 @@ const ex8 = () =>{
     let words = "Count the words in this string";
     console.log(countWords(words));
 }
+
+const ex9 = () =>{
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));
+}
+
 //
 // Your functions here...
 //
@@ -118,12 +124,22 @@ const sort = (array) => {
   return retval; // If compare(a,b) returns zero, the sort() method considers a equals b and leaves their positions unchanged.
 };
   
-
 const countWords = (String) =>{
    let count = String.length
     count = String.split(' ').length // spliting the substrings (words) by spaces 
     return count
 }
+
+const countS = (String) =>{
+    let count = 0
+     let strng = String.split(' ') // spliting the substrings (words) by spaces 
+     for (let i = 0; i < strng.length; i++) { // going through all the characters in the words.
+         if (strng[i].endsWith('s')) {
+             count++
+         }
+     }
+     return count
+ }
     
 
 const main = async () => {
@@ -133,8 +149,9 @@ const main = async () => {
   //ex4();
   //ex5();
   //ex6();
-  ex7();
+ // ex7();
  //ex8()
+ ex9()
 };
 
 main();
