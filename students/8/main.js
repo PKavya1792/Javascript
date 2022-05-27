@@ -2,6 +2,7 @@
 // File: main.js
 // Date: 5/24/2022
 // 
+import { Calculator } from "./Calculator.js";
 
 const ex1 = () => {
     const array1 = [1, '2', 3, 'test', 1.2];
@@ -57,6 +58,46 @@ const ex10 = () => {
 const ex11 = () => {
     let arr = ['dog', 3, 7, 'cat', 13, 'car'];
     console.log(numbersOnly(arr));
+}
+
+const ex12 = () => {
+    const c = new Calculator();
+    c.add(1,2);
+    c.sub(4,1);
+    c.div(10,2);
+    c.mul(2,2)
+    console.log(c.getHistory())
+}
+
+const ex13 = () => {
+    let dict = [
+        { "firstName": "joe", 
+          "lastName": "smith", 
+          age: 10 },
+
+        { "firstName": "paul", 
+          "lastName": "simmon", 
+          age: 20 },
+
+        { "firstName": "fred", 
+          "lastName": "jones", 
+          age: 30 },
+    ]
+    console.log(getTotalAge(dict))
+}
+
+const ex14 = () => {
+    let customers = [{
+        name: 'ABC Inc',
+        credit: 100
+    }, {
+        name: 'ACME Corp',
+        credit: 200
+    }, {
+        name: 'IoT AG',
+        credit: 300
+    }];
+    console.log(creditFinder(customers))
 }
 
 //
@@ -158,8 +199,26 @@ const numbersOnly = (arr) => {
     return newArr
 }
 
+const getTotalAge = (dict) => {
+    let totalAge = 0;
+    for (let i = 0; i < dict.length; i++) {
+        totalAge += dict[i].age
+    }
+    return "The total age is: " + totalAge
+}
+
+const creditFinder = (customers) => {
+    let i = 0
+    while (i < customers.length) {
+        i++
+        if (customers[i].credit == 200) {
+            return customers[i]
+        }
+    }
+}
+
 const main = async () => {
-    ex5()
+    ex14()
 }
 
 main();
