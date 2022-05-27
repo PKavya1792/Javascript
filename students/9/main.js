@@ -3,6 +3,23 @@
 // Date: 5/24/2022
 //
 
+//Output: 2
+
+const ex2 = () => {
+  const array = [12, 55, 2, 22, 11];
+  console.log(minNumber(array));
+};
+
+const minNumber = (array) => {
+  let retval = array(0);
+  for (let i of array) {
+    if (i < retval) {
+      retval = i;
+    }
+  }
+  return retval;
+};
+
 const countNumbers = (array) => {
   let retval = 0;
   for (let i of array) {
@@ -10,20 +27,14 @@ const countNumbers = (array) => {
       retval++;
     }
   }
-  return retval;
 };
-
 const main = async () => {
-  ex1();
+  ex2();
 };
 
 main();
 
-/*const ex2 = () => {
-    // TODO...
-}
-
-const ex3 = () => {
+/*const ex3 = () => {
     const array1 = [1, 2, 3, 4, 5];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
