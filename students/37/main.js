@@ -39,15 +39,36 @@ const ex7 = () => {
     let n = [1, 3, 6, 3, 6, 10];
 console.log(sort(n));
 }
+
+
+const ex8 = () => {
+    let words = "Count the words in this string";
+console.log(countWords(words));
+}
 //
 // Your functions here...
 //
 
+
+//ex8
+const countWords = (words) => {
+    let retval = 0
+    const array = words.split(" ");
+    for (let i of array) {
+        if (typeof i == "string") {
+          retval++;
+        }
+      }
+      return retval;
+    };
+
+//ex7
 const sort = (arrayOfNumbers) => {
     const sortedarrayOfNumbers = arrayOfNumbers.sort((a,b) => (a-b))
     return sortedarrayOfNumbers
 }
 
+//ex6
 const longestString = (array) => {
     let longest = array[0]
     for(let i = 0; i<array.length; i++){
@@ -58,6 +79,7 @@ const longestString = (array) => {
     return longest
 }
 
+//ex5
 const countOccurences = (text, searchWord) => {
     let retval = ""
     let wordCounter = 0;
@@ -72,7 +94,7 @@ retval ="this appears: " + wordCounter + "times"
  return retval;   
 }
 
-
+//ex4
 const palindrome = (word) => {
   let retval = true;
   const input = word.split("");
@@ -84,6 +106,7 @@ const palindrome = (word) => {
   return retval;
 };
 
+//ex3
 const interleave = (array1, array2) => {
   let retval = "ERROR: Array length mismatch";
   if (array1.length == array2.length) {
@@ -95,6 +118,7 @@ const interleave = (array1, array2) => {
   return retval;
 };
 
+//ex2
 const minNumber = (array) => {
   let retval = array[0];
   for (let i of array) {
@@ -105,6 +129,7 @@ const minNumber = (array) => {
   return retval;
 };
 
+//ex1
 const countNumbers = (array) => {
   let retval = 0;
   for (let i of array) {
@@ -116,7 +141,7 @@ const countNumbers = (array) => {
 };
 
 const main = async () => {
-  ex7();
+  ex8();
 };
 
 main();
