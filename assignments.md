@@ -202,28 +202,7 @@ Output:
 1
 ```
 
-## Ex. 12 
-Create a `Calculator` class that performs simple math operations and prints the results of all the calculations to the console.
-
-Usage:
-```
-const c = new Calculator();
-c.add(1,2);
-c.sub(4,1);
-c.div(10,2);
-c.mul(2,2)
-console.log(c.getHistory())
-```
-
-Output:
-```
-Add: 1 + 2 = 3
-Sub: 4 - 1 = 3
-Div: 10 / 2 = 5
-Mul: 2 * 2 = 4
-```
-
-## Ex. 13
+## Ex. 12
 
 Given the following dictionary:
 
@@ -242,7 +221,7 @@ Output:
 The total age is: 60.
 ```
 
-## Ex. 14
+## Ex. 13
 
 Given the following data:
 
@@ -264,4 +243,25 @@ Display the item whose credit is 200, do not use a for loop.
 Output:
 ```
 { name: 'ACME Corp', credit: 200 }
+```
+
+## Ex. 14 
+Create a `Calculator` class that performs simple math operations and prints the results of all the calculations to the console.
+
+Usage:
+```
+const c = new Calculator();
+c.add(1,2);
+c.sub(4,1);
+c.div(10,2);
+c.mul(2,2)
+console.log(c.getHistory())
+```
+
+Output:
+```
+Add: 1 + 2 = 3
+Sub: 4 - 1 = 3
+Div: 10 / 2 = 5
+Mul: 2 * 2 = 4
 ```
