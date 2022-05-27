@@ -34,10 +34,21 @@ const ex6 = () => {
     console.log(longestString(array));
 }
 
+const ex7 = () => {
+    const arrayOfNumbers = [1, 3, 6, 3, 6, 10];
+    console.log(sort(arrayOfNumbers));
+}
 
 //
 // Your functions here...
 //
+
+const sort = (arrayOfNumbers) => {
+    const sortedArrayOfNumbers = arrayOfNumbers.sort((a,b) => (a-b))
+    return sortedArrayOfNumbers
+}
+
+
 
 const longestString = (array) => {
     let lgth = 0;
@@ -113,7 +124,7 @@ const countNumbers = (array) => {
 }
 
 const main = async () => {
-    ex6();
+    ex7();
 }
 
 main();
