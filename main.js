@@ -61,8 +61,15 @@ const ex10 = () =>{
 }
 
 const ex11 = () =>{
-    let arr = ['dog', 3, 7, 'cat', 13, 'car'];
-    console.log(numbersOnly(arr));
+    let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "numbers"));
+
+    // let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "strings"));
+
+    // let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "decimals"));
+   
 }
 
 const ex12 = () =>{
@@ -121,8 +128,12 @@ const ex14 = () =>{
 const countNumbers = (array) => {
     let retval = 0;
     for(let i=0; i<array.length;i++){
-        if(typeof(array[i])=="number")
-        retval++;
+        if(typeof(array[i])=="number"){
+            if(array[i] % 1 === 0){
+                retval++;
+            }
+        }
+        
     }
     return retval;
 }
@@ -199,14 +210,40 @@ const countLetters = (array) =>{
     return letterCount;
 }
 
-const numbersOnly = (arr) =>{
-    let numArr = [];
-    for(let i = 0; i< arr.length; i++){
-        if(typeof(arr[i]) == 'number'){
-            numArr.push(arr[i])
-        }
+const countIt = (array, string) =>{
+    let num = 0;
+    if(string === 'numbers'){
+        num = countNumbers(array);
     }
-    return numArr;
+    else if(string === 'strings'){
+        num = countStrings(array);
+    }
+    else if(string === 'decimals'){
+        num = countDecimals(array);
+    }
+    return num;
+}
+
+const countStrings = (array) =>{
+    let retval = 0;
+    for(let i=0; i<array.length;i++){
+        if(typeof(array[i])=="string")
+        retval++;
+    }
+    return retval;
+}
+
+const countDecimals = (array) =>{
+    let retval = 0;
+    for(let i=0; i<array.length;i++){
+        if(typeof(array[i])=="number"){
+            if(array[i] % 1 != 0){
+                retval++;
+            }
+        }
+        
+    }
+    return retval;
 }
 
 class Calculator{
@@ -250,10 +287,10 @@ const main = async () => {
     // ex8();
     // ex9();
     // ex10();
-    // ex11();
+     ex11();
     // ex12();
     // ex13();
-    ex14();
+    // ex14();
 }
 
 main();
