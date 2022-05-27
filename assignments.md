@@ -163,7 +163,7 @@ Create an arrow function named: `countIt` that counts the number of integer numb
   - `countStrings`
   - `countDecimals`
 
-The fuction `countIt` accepts two parameters;
+The function `countIt` accepts two parameters;
  - An input array of integer numbers, decimal numbers and strings
  - A string that represents the type of things to search for (e.g. "numbers", "strings", "decimals")
 
@@ -177,6 +177,7 @@ Output:
 ```
 3
 ```
+---
 
 Usage #2:
 ```
@@ -188,6 +189,7 @@ Output:
 ```
 2
 ```
+---
 
 Usage #3:
 ```
