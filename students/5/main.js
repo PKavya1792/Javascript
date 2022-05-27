@@ -191,6 +191,22 @@ class Calculator {
     }
 }
 
+//ex 13
+const ex13 = () => {
+    let result = 0;
+    let sum = 0;
+    const dict = [
+        { "firstName": "joe", "lastName": "smith", age: 10 },
+        { "firstName": "paul", "lastName": "simmon", age: 20 },
+        { "firstName": "fred", "lastName": "jones", age: 30 },
+    ]
+    result = dict.map(a => a.age);
+    for (let i = 0; i < result.length; i++) {
+        sum += result[i];
+    }
+    console.log(`The total age is: ${sum}.`);
+}
+
 const main = async () => {
     //ex1();
     //ex2();
@@ -203,7 +219,8 @@ const main = async () => {
     //ex9();
     //ex10();
     //ex11();
-    ex12();
+    //ex12();
+    ex13();
 }
 
 main();
