@@ -180,7 +180,13 @@ const ex10 = () =>{
  }
  //Ex 11 Function
  const numbersOnly = (array) => {
-
+    let retval = []
+    for (let i = 0; i < array.length; i++) { 
+        if (typeof array[i] === "number") {  
+        retval.push(array[i])
+      }
+    }
+    return retval;
  } 
  
 
