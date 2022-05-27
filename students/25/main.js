@@ -25,13 +25,23 @@ const ex4 = () => {
 };
 
 const ex5 = () => {
-    let str = "today this is a this is a this is a test.";
-    console.log( `this appears: ${(countOccurences(str, "this"))} times.`)
-}
+  let str = "today this is a this is a this is a test.";
+  console.log(`this appears: ${countOccurences(str, "this")} times.`);
+};
 
 const ex6 = () => {
-   const array = ['this', 'is', 'a', 'test', 'happy'];
-    console.log(longestString(array));
+  const array = ["this", "is", "a", "test", "happy"];
+  console.log(longestString(array));
+};
+
+const ex7 = () => {
+  let n = [1, 3, 6, 3, 6, 10];
+  console.log(sort(n));
+};
+
+const ex8 = () =>{
+    let words = "Count the words in this string";
+    console.log(countWords(words));
 }
 //
 // Your functions here...
@@ -96,6 +106,24 @@ const longestString = (array) => {
   }
   return longest;
 };
+
+const sort = (array) => {
+  let retval = 0;
+  for (let i = 0; i < array.length; i++) {
+    retval = array.sort((a, b) => {
+      if (a > b) return retval + 1; //If compare(a,b) is less than zero, the sort() method sorts a to a lower index than b. In other words, a will come first.
+      if (a < b) return retval - 1; // If compare(a,b) is greater than zero, the sort() method sort b to a lower index than a, i.e., b will come first.
+    });
+  }
+  return retval; // If compare(a,b) returns zero, the sort() method considers a equals b and leaves their positions unchanged.
+};
+  
+
+const countWords = (String) =>{
+   let count = String.length
+    count = String.split(' ').length // spliting the substrings (words) by spaces 
+    return count
+}
     
 
 const main = async () => {
@@ -104,7 +132,9 @@ const main = async () => {
   //ex3();
   //ex4();
   //ex5();
-  ex6();
+  //ex6();
+  ex7();
+ //ex8()
 };
 
 main();
