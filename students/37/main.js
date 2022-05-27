@@ -24,9 +24,31 @@ const ex4 = () => {
   console.log(palindrome("month"));
 };
 
+const ex5 = ()=>{
+    const text = "today this is a this is a this is a test.";
+    const result = countOccurences(text, "this");
+    console.log(result);
+}
+
 //
 // Your functions here...
 //
+
+
+const countOccurences = (text, searchWord) => {
+    let retval = ""
+    let wordCounter = 0;
+    const wordArray = text.split(" ");
+    for(let word of wordArray) {
+        //console.log(word);
+        if (searchWord == word) {
+            wordCounter++
+        }
+    }
+retval ="this appears: " + wordCounter + "times"
+ return retval;   
+}
+
 
 const palindrome = (word) => {
   let retval = true;
@@ -71,7 +93,7 @@ const countNumbers = (array) => {
 };
 
 const main = async () => {
-  ex4();
+  ex5();
 };
 
 main();
