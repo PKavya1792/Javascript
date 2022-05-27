@@ -31,7 +31,7 @@ const ex4 = () => {
 }
 const ex5 = () => {
     let str = "today this is a this is a this is a test"
-    console.log(countWords(str))
+    console.log(countTimes(str))
     console.log(countWordsWithSplit(str))
 }
 const ex6 = () => {
@@ -39,8 +39,23 @@ const ex6 = () => {
     console.log(longestString(array))
 }
 const ex7 = () => {
-    
+    let n = [1, 3, 6, 3, 6, 10];
+console.log(sort(n));
 }
+const ex8 = () => {
+    let words = "Count the words in this string";
+    console.log(countWords(words));
+
+}
+const ex9 = () => {
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));
+}
+const ex10 = () => {
+    var array = ["this", "is", "a", "test"];
+    console.log(countLetters(array));
+}
+
 
 
 
@@ -91,7 +106,7 @@ const palindrome = String => {
     }
     return true
 }
-const countWords = String => {
+const countTimes = String => {
     const count = String.match(/this/g).length
     return count
 }
@@ -110,6 +125,29 @@ const longestString = (array) => {
     }
     return longest
 }
+const sort = (array) => {
+    array.sort(function(a,b) {return a-b})
+    return array
+}
+const countWords= (String) => {
+    const strSplit = String.split(" ")
+    return strSplit.length
+}
+const countS = (String) => {
+    const strSplit = String.toLowerCase().split("s ")
+    return strSplit.length
+}
+// const countLetters = (array) => {
+//     let arr = array.join("")
+//     return arr.length
+//}
+const countLetters = (array) => {
+    let map = new Map
+    array.join("").split("").array.forEach(element => {
+        map[e] = (map[e] || 0)+1
+    });
+    return map
+}
 
 
 
@@ -122,6 +160,9 @@ const main = async () => {
     ex5()
     ex6()
     ex7()
+    ex8()
+    ex9()
+    ex10()
 }
     
 main();
