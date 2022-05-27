@@ -5,7 +5,7 @@
 
 const ex1 = () => {
     const array = [1, '2', 3, 'test', 1.2];
-    console.log(countNumbers(array));
+    console.log(countNumber(array));
 
 }
 
@@ -59,11 +59,18 @@ const ex4 = () => {
      var array = ["this", "is", "a", "test"];
      console.log(countLetters(array));
  }
+ const ex11 = () =>{
+     let array = ['dog',3,7,'cat',13,1.2];
+     console.log(countIt(array, "numbers"));
+     console.log(countIt(array,"strings"));
+     console.log(countIt(array,"decimals"));
+ }
+
 //
 // Your functions here...
 //
 
-const countNumbers = (array) => {
+const countNumber = (array) => {
     let retval = 0;
     for(const num of array){
         if(typeof(num) == 'number'){
@@ -135,8 +142,44 @@ const countLetters = (array) =>{
     
     return array.join("").length;
 }
+const countIt = (array,retval)=>{
+   if(retval == 'numbers'){
+       return countNumbers(array)
+   }else if(retval == 'strings'){
+       return countString(array)
+   }else if(retval == 'decimals'){
+       return countDecimal(array)
+   }
+}
+const countNumbers = (array) =>{
+    let retval =0;
+    for(const x of array){
+    if(typeof(x) == 'number' && x%1==0){
+        retval++
+    }
+}
+    return retval;
+} 
+const countString = (array) =>{
+    let retval= 0;
+    for (const x of array){
+        if(typeof(x) == 'string'){
+            retval++;
+        }
+    }
+    return retval;
+}
+const countDecimal = (array) =>{
+    let retval =0;
+    for(const x of array){
+        if(typeof(x)== 'number' && x%1 !=0){
+            retval++;
+        }
+    }
+    return retval;
+}
 const main = async () => {
-    ex10();
+    ex11();
 }
 
 main();
