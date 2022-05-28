@@ -56,12 +56,20 @@ const ex9 = () => {
 }
 
 const ex10 = () => {
-
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));
 }
 
 const ex11 = () => {
-
+    let array = ['dog', 3, 7, 'cat', 13, 1.2];
+    console.log(countIt(array, "numbers"));
+    console.log(countIt(array, "strings"));
+    console.log(countIt(array, "decimals"));
 }
+
+
+
+
 
 //
 // Your functions here...
@@ -71,14 +79,36 @@ const countNumbers = (array) => {
     let retval = 0;
     // TODO...
     for(let i = 0; i<array.length; i++){
-        if(typeof(array[i]) === 'number'){
+        if(typeof(array[i]) === 'number'&& array[i] % 1 == 0){
             retval++
         }
     }
-    return retval;
+    return 'There are '+retval+ ' numbers';
 }
 
-const minNumber = (array) => {
+const countStrings = (array) => {
+    let retval = 0;
+    // TODO...
+    for(let i = 0; i<array.length; i++){
+        if(typeof(array[i]) === 'string'){
+            retval++
+        }
+    }
+    return 'There are '+retval+ ' strings';
+}
+
+const countDecimals = (array) => {
+    let retval = 0;
+    // TODO...
+    for(let i = 0; i<array.length; i++){
+        if(array[i] % 1 != 0 && typeof(array[i])==='number'){
+            retval++
+        }
+    }
+    return 'There are '+retval+ ' decimals';
+}
+
+const minNumber = array => {
    let minNumber = array[0]
     for(let i = 0; i<array.length; i++){
         if(array[i]<minNumber){
@@ -104,7 +134,7 @@ let i = 0
             }
         }
         return retval
-    }
+ }
     
 const palidrome = (string) => {
     
@@ -156,11 +186,46 @@ const countLetters = (array) => {
     for (const i of array) {
         letterCount += i.length
     }
-    return letterCount
+    return 'The number of letters in this array is: ' + letterCount
+}
+
+const countS = (string) => {
+    let sCount = 0
+    let words = string.split(" ")
+    for (const i of words) {
+        if(i.endsWith('s'))
+        sCount++
+    }
+    return 'The number of words that end in S is: '+sCount
+}
+
+const numbersOnly = (array) => {
+    let numbers = new Array
+    for (const i of array) {
+        if(typeof(array[i]) ==="number")
+        numbers.push(array[i])
+    }
+    return numbers
+}
+
+const countIt = (array, string) => {
+    let retval = " "
+    if(string=="numbers"){
+       retval = countNumbers(array)
+    }
+
+    if(string=="strings"){
+        retval = countStrings(array)
+    }
+
+    if(string=="decimals"){
+       retval = countDecimals(array)
+    }
+    return retval
 }
 
 const main = async () => {
-    ex9();
+ ex11()
 }
 
 main();
