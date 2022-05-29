@@ -90,6 +90,16 @@ const longestString = (str) =>{
     }
     return 'happy';
   } 
+
+  //exercise 7
+  const ex7 = () => {
+    const n = [1, 3, 6, 3, 6, 10];
+    console.log(sort(n));
+  }
+
+  const sort = (n) => {
+     return n.sort((a,b) => a-b);
+  }
      
     
 
@@ -115,7 +125,7 @@ const longestString = (str) =>{
 
 
 const main = async () => {
-    ex6();
+    ex7();
 }
 
 main();
