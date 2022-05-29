@@ -100,7 +100,22 @@ const longestString = (str) =>{
   const sort = (n) => {
      return n.sort((a,b) => a-b);
   }
-     
+
+  //exercise 8
+  const ex8 = () => {
+    const str = "Count the words in this string";
+    console.log(countWord(str)); 
+    
+  }
+
+  const countWord = (str) =>{
+    return str
+    .split(' ')
+    .filter(function(n) { return n != '' })
+    .length;
+}
+
+//exercise 9
     
 
 
@@ -125,7 +140,7 @@ const longestString = (str) =>{
 
 
 const main = async () => {
-    ex7();
+    ex8();
 }
 
 main();
