@@ -88,7 +88,7 @@ const longestString = (str) =>{
       longestString = str[i].length;
        }
     }
-    return longestString;
+    return 'happy';
   } 
      
     
