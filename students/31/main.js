@@ -116,7 +116,98 @@ const longestString = (str) =>{
 }
 
 //exercise 9
+ const ex9 = () => {
+    const a = "this counts the number of words that end in s";
+    console.log(countString(a, 's'));
+ }  
+ const countString = (a, letter) => {
+    let count = 0;
+    for (let i=0; i<a.length; i++)
+    { 
+        if (a.charAt(i) == letter) {
+            count += 1;
+        }
+    }
+    return count ;
+}
+
+
+//exercise 10
+const ex10 = () => {
+    let string = ["this", "is", "a", "test"];
+    console.log(countLetters(string)); 
+}
+
+const countLetters = ((array)=>{
+    let newArray = array.map(item => item=item.length)
+    let result = newArray.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+    }, 0)
+    return result
+    })
+
+//exercise 11
+const ex11 = () => {
+    let arr = ['dog', 3, 7, 'cat', 13, 'car'];
+    console.log(numbersOnly(arr));
+}
+
+const numbersOnly = (arr) =>{
+    let newArray = arr.filter(item => typeof item === 'number');
+    return newArray;
+} 
+
+//exercise 12
+const ex12 = () =>{
+    const c = new Calculator();
+    c.add(1,2);
+    c.sub(4,1);
+    c.div(10,2);
+    c.mul(2,2)
+    console.log(c.getHistory()) 
+}
+
+//exercise 13
+const ex13 = () => {
+    let dict = [
+        { "firstName": "joe", "lastName": "smith", age: 10 },
+        { "firstName": "paul", "lastName": "simmon", age: 20 },
+        { "firstName": "fred", "lastName": "jones", age: 30 },
+        ]
+
+ 
+let total_age = 0;
+dict.forEach((record)=>{
+total_age+=record.age
+});
+
+console.log(total_age);
+}
     
+//exercise 14
+const ex14 = () =>{
+let customers = [{
+    name: 'ABC Inc',
+    credit: 100
+    }, {
+    name: 'ACME Corp',
+    credit: 200
+    }, {
+    name: 'IoT AG',
+    credit: 300
+    }];
+    
+    let result = customers.find( customer => customer.credit == 200)
+    
+    console.log(result)    
+}   
+    
+    
+
+     
+ 
+
+ 
 
 
 
@@ -140,7 +231,7 @@ const longestString = (str) =>{
 
 
 const main = async () => {
-    ex8();
+    ex14();
 }
 
 main();
