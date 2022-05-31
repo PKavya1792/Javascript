@@ -183,7 +183,7 @@ const longestString = (array) =>{
     return array[index];
 }
 const sort = (array) =>{
-    return array.sort(function(a, b){return a - b});
+    return array.sort((a, b)=>{return a - b});
 }
 
 const countWords = (string) =>{
