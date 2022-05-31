@@ -62,8 +62,85 @@ const countOccurnece = (str, thisWord) => {
     answer = 'this appears: ' + count + ' times'
     return answer;
 }
+
+const ex6 = () => {
+    const array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
+}
+
+const longestString = (array) => {
+    var max = 0;
+    let longest;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length > max) {
+            var max = array [i].length;
+            longest = array[i];
+        }
+    } return longest;
+}
+
+const ex7 = () => {
+    let n = [1, 3, 6, 3, 6, 10];
+    console.log(sort(n));
+}
+
+const sort = (n) => {
+    const sorted = n.sort((a,b) => (a-b))
+    return sorted;
+}
+
+const ex8 = () => {
+    let words = "Count the words in this string";
+    console.log(countWords(words));
+}
+
+const countWords = (words) => {
+    let answer = 0;
+    const array = words.split(' ');
+    for(let i of array) {
+        if (typeof(i) == 'string'){
+            answer++;
+        }
+    } return answer;
+}
+const ex9 = () => {
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));  
+}
+
+const countS = (a) => {
+    let count = 0;
+    const array = a.split(' ');
+    let letter = 's'
+    for(let i = 0; i < array.length; i++) {
+        if (letter == (array[i])){
+            count++;
+        }
+    } return count;
+}
+const ex10 = () => {
+    
+}
+
+const ex11 = () => {
+    
+}
+
+const ex12 = () => {
+    
+}
+
+
+const ex13 = () => {
+    
+}
+
+const ex14 = () => {
+    
+}
+
 const main = async () => {
-    ex5();
+    ex9();
 }
 
 main();
