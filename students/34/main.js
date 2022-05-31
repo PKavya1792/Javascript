@@ -108,9 +108,10 @@ const ex9 = () => {
     console.log(countS(a));  
 }
 
+//only returning letter s 
 const countS = (a) => {
     let count = 0;
-    const array = a.split(' ');
+    const array = a.split(' ').length;
     let letter = 's'
     for(let i = 0; i < array.length; i++) {
         if (letter == (array[i])){
