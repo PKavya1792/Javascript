@@ -15,7 +15,9 @@ const ex2 = () => {
 }
 
 const ex3 = () => {
-
+const array1 = [1, 2, 3, 4, 5];
+const array2 = ['a', 'b', 'c', 'd', 'e'];
+console.log(interleave(array1, array2));
 }
 
 
@@ -38,11 +40,9 @@ const countNumbers-(array)=> {
 }
 
 main();
+>const countNumbers - (array)-> {}
 
 
-const array1 = [1, 2, 3, 4, 5];
-const array2 = ['a', 'b', 'c', 'd', 'e'];
-console.log(interleave(array1, array2));
 
 const interleave =(array1,array2) =>{
     let retval = 'ERROR: Array length mismatch';
@@ -61,6 +61,19 @@ const main = async() => {
 }
 
 main();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // for(let i=0; i <3;i--){
