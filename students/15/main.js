@@ -24,6 +24,7 @@ const countNumbers = (array) => {
     let retval = 0;
     // TODO...
     return retval;
+    kaa
 }
 
 const main = async () => {
